@@ -1,0 +1,173 @@
+﻿
+        .card-container {
+            margin-left: 20px;
+            height: 445px;
+            margin-top: 24px;
+            border: 1px groove;
+            border-radius: 4px;
+            padding: 10px;
+            width: 315px;
+            /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);*/
+        }
+
+
+            .card-container:hover {
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                transition: box-shadow 0.5s ease;
+            }
+
+
+            .card-container ~ card-container {
+                margin-left: 410px;
+                margin-top: -512px;
+            }
+
+        .card1 {
+            width: 87rem;
+        }
+
+            .card1 ~ card2 {
+                margin-left: 410px;
+                margin-top: -512px;
+            }
+
+        .card-image {
+        }
+
+        img {
+            vertical-align: middle;
+            border-style: none;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.3s ease;
+        }
+
+
+        .card-horizontal .card-image {
+            margin-bottom: 10px;
+        }
+
+        .card-horizontal .card-content {
+            margin: 0;
+        }
+
+        <!== HOVER the IMGAE CSS=== > .content {
+            width: 600px;
+            height: 400px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .content img {
+            max-width: 100%;
+            transform-origin: 50% 65%;
+            transition: transform 5s, filter 3s ease-in-out;
+            filter: brightness(150%);
+        }
+        /* The Transformation */
+
+        .content:hover img {
+            filter: brightness(100%);
+            transform: scale(3);
+        }
+
+        <!== HOVER the IMGAE CSS=== > .body {
+            background-color: snow;
+        }
+
+        .icon-user {
+            color: #FF9800;
+        }
+
+        /*.icon-user:hover {
+                color: darkblue;
+            }*/
+
+
+        .icon-heart {
+            color: #FF9800;
+        }
+
+        /*.icon-heart:hover {
+                color: darkblue;
+            }*/
+
+        .icon-shopping-cart {
+            color: #FF9800;
+        }
+
+        /*.icon-shopping-cart:hover {
+                color: darkblue;
+            }*/
+
+
+        .carticon {
+            position: relative;
+        }
+
+        .badge1 {
+            position: absolute;
+            margin-top: 10px;
+            background-color: #082c61;
+            color: white;
+            margin-left: -11px;
+            width: 21px;
+            height: 20px;
+            border-radius: 84%;
+            border: none;
+            text-align: center;
+            font-size: 11px;
+        }
+
+        .carticon {
+            position: relative;
+        }
+
+        .crt {
+            position: absolute;
+            margin-top: -19px;
+        }
+        /*.bd{
+            background: radial-gradient(circle at 18.7% 37.8%, rgb(250, 250, 250) 0%, rgb(225, 234, 238) 90%);
+        }*/
+
+        
+.sidenav {
+  height: 100%;
+  width:700px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+

@@ -1,0 +1,194 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="Admin.AdminScreens.Admin" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <link href="StyleSheet1.css" rel="stylesheet" />
+    <title>Admin Dashboard</title>
+    <link href="../banner/logo.jpeg" type="../banner/logo.jpeg" rel="icon" />
+
+    <link href="AdminStyleSheet.css" rel="stylesheet" />
+    <style>
+        .mainbody {
+            margin-left: 160px;
+            margin-top: 115px;
+        }
+    </style>
+</head>
+
+
+<asp:contentplaceholder id="head" runat="server">
+    </asp:contentplaceholder>
+
+<body>
+    <form runat="server">
+
+    <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white" >
+        <div class="position-sticky">
+
+            <div class="list-group list-group-flush mx-3 mt-4">
+
+                <a href="AdminDashboard.aspx" class="list-group-item list-group-item-action py-2 ripple">
+                    <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>Main dashboard</span>
+                </a>
+
+                <a href="stockyentry.aspx" class="list-group-item list-group-item-action py-2 ripple">
+                    <i class="fa-solid fa-arrow-right-to-bracket"></i>&nbsp<span>Stock Entry</span> </a>
+
+                <a href="#" class="list-group-item list-group-item-action py-2 ripple">
+                    <i class="fa-solid fa-table-list"></i>&nbsp<span>Stock List</span> </a>
+
+
+
+                <a href="AddNewProduct.aspx"  class="list-group-item list-group-item-action py-2 ripple">
+                    <i class="fa-solid fa-table-list"></i>&nbsp<span>Add Product</span> </a>
+
+                <a href="Customers.aspx" class ="list-group-item list-group-item-action py-2 ripple">
+                    <i class="fa-regular fa-user"></i>&nbsp<span>Customers</span> </a>
+
+                <a href="#" class="list-group-item list-group-item-action py-2 ripple">
+                    <i class="fa-regular fa-user"></i>&nbsp<span>Vendors</span> </a>
+                <a href="#" class="list-group-item dropdown-toggle list-group-item-action py-2 ripple" data-toggle="dropdown">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart">
+                        <circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>&nbsp <span class="dropdown-btn">E-commerce</span>
+                </a>
+
+                <ul>
+                    <li class="dropdown-menu">
+                        <a href="Banners.aspx" class="dropdown-item">Banner </a>
+                        <a href="#" class="dropdown-item">Products </a>
+                        <a href="#" class="dropdown-item">Orders</a>
+                        <a href="#" class="dropdown-item">Shopping cart</a>
+                        <a href="#" class="dropdown-item">Payment details</a>
+                        <a href="#" class="dropdown-item">Invoice</a>
+                        <a href="#" class="dropdown-item">Check out</a> </li>
+                </ul>
+
+                <a href="#" class="list-group-item list-group-item-action py-2 ripple">
+                    <i class="fa-solid fa-list"></i>
+                    &nbsp <span>Order list </span></a>
+
+                <a href="contact.aspx" class="list-group-item list-group-item-action py-2 ripple">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                    &nbsp <span>Calendar</span></a>
+
+                <a href="#" class="list-group-item list-group-item-action py-2 ripple">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>&nbsp
+             <span>Email</span></a>
+
+                <a href="#" class="list-group-item list-group-item-action py-2 ripple">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                    &nbsp<span>Chat</span></a>
+
+                <a href="#" class="list-group-item list-group-item-action py-2 ripple">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bookmark">
+                        <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+                    <span>Events</span></a>
+
+                <a href="#" class="list-group-item list-group-item-action py-2 ripple">
+                    <i class="fa-solid fa-rotate-left"></i>&nbsp<span>Refunds</span></a>
+
+                <a href="#" class="list-group-item list-group-item-action py-2 ripple">
+                    <i class="fa-sharp fa-regular fa-bell"></i>&nbsp<span>Notification</span></a>
+
+            </div>
+        </div>
+      <%--<asp:Button ID="logout1" runat="server" class="btn btn-danger" Text="Logout"  Onclick="logout_Click" style="margin-left:38px; width:160px;"/>--%>
+      
+        <button class="btn btn-danger"  id="btn_logout" runat="server" onserverclick="btn_logout_ServerClick">Logout</button>
+    </nav>
+
+
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <!-- ------------Navbar ----------------->
+    <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light bg-light fixed-top" style="height: 80px;">
+
+        <!-- Container wrapper -->
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.aspx">
+
+                <div class="logo">
+                    <img src="Images/logo.png" style="max-height: 40px" />
+
+                </div>
+            </a>
+
+            <form class="d-none d-md-flex ms-4">
+
+                <input class="form-control bg-light border-waring" type="search" placeholder="Search" id="txt_search" runat="server" style="width: 25rem;" />
+            </form>
+
+            <div class="d-flex align-items-center ms-4 mb-4">
+
+                <div class="navbar-nav align-items-center ms-auto">
+
+                    <div class="nav-item ">
+
+                        <div class="nav-link " style="margin-right: 45px;">
+                            <a href="Messages.aspx"><i class="fa fa-envelope me-lg-2 fa-2x icon" style="color: #f6a21c; margin-top: 20px; margin-left: -41px;"></i></a>
+                            <span class="badge">
+                                <asp:Label ID="message_label" runat="server"></asp:Label>  &nbsp
+                            </span>
+
+                            <span class="msg"><b>Messages</b></span>
+                        </div>
+                    </div>
+
+                    &nbsp  &nbsp &nbsp
+
+                    <div class="nav-item ">
+                        <div class="nav-link" style="margin-right: 45px;">
+
+                            <a href="SubscribersDetails.aspx"><i class="fa fa-bell me-lg-2 fa-2x" style="color: #f6a21c; margin-top: 20px; margin-left: -41px;"></i></a>
+
+                            <span class="badge1">
+                                <asp:Label ID="subscribe_label" runat="server"></asp:Label>
+                                &nbsp
+                            </span>
+
+                            <span class="subscribe"><b>Subscribers</b></span>
+                        </div>
+                    </div>
+
+
+                    <div class="user mt-4">
+                        <i class="fa-solid fa-user fa-2x" style="color: #111dbd; margin-left:70px;" ></i><br />
+                        <span class="adminlbl">snehitha123@gmail.com</span>
+                 <%--       <asp:label runat="server" ID="adminId_label" Text=""> </asp:label>--%>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    </form>
+
+    <%--     <div class="position-relative ">
+                  <img class="rounded-circle" src="../seller%20login/images/user.png""  alt="" style="width: 40px; height: 40px;" />--%>
+
+                     <%--<div class="ms-3">
+                        <h6 class="mb-0 " style="margin-left: 10px;">Jhon Doe</h6>
+                        <span style="margin-left: 10px;">Admin</span>
+                    </div>--%>
+</body>
+
+</html>
