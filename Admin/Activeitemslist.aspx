@@ -17,7 +17,7 @@
     <table class="table mt-4" >
     <thead>
     <tr>
-      <th scope="col">Id</th>
+      <th scope="col">Id </th>
       <th scope="col">Name</th>
       <th scope="col">Price</th>
       <th scope="col">Brand</th>
