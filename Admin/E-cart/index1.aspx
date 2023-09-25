@@ -105,12 +105,10 @@
             /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);*/
         }
 
-
             .card-container:hover {
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
                 transition: box-shadow 0.5s ease;
             }
-
 
             .card-container ~ card-container {
                 margin-left: 410px;
