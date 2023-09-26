@@ -27,6 +27,8 @@ namespace Admin.E_cart
             BindData();
         }
 
+        Label lblnm = new Label();
+
         private void BindData()
         {
 
@@ -38,6 +40,8 @@ namespace Admin.E_cart
             emsdal da = new emsdal();
             DataSet ds = new DataSet();
             ds = da.ProductDetails(APID);
+
+
             if (ds.Tables[0].Rows.Count > 0)
             {
 
@@ -65,11 +69,11 @@ namespace Admin.E_cart
                 Panel_productname.Controls.Add(new LiteralControl("</p>"));
 
 
-                Panel_productname.Controls.Add(new LiteralControl("<h6> Discount:-"));
-                Label lblnm3 = new Label();
-                lblnm3.Text = ds.Tables[0].Rows[i]["Discount"].ToString();
-                Panel_productname.Controls.Add(lblnm3);
-                Panel_productname.Controls.Add(new LiteralControl("</h6> "));
+                //Panel_productname.Controls.Add(new LiteralControl("<h6> Discount:-"));
+                //Label lblnm3 = new Label();
+                //lblnm3.Text = ds.Tables[0].Rows[i]["Discount"].ToString();
+                //Panel_productname.Controls.Add(lblnm3);
+                //Panel_productname.Controls.Add(new LiteralControl("</h6> "));
 
 
                 Panel_productname.Controls.Add(new LiteralControl("<h6>Brand:-"));
@@ -87,12 +91,14 @@ namespace Admin.E_cart
 
 
                 Panel_productname.Controls.Add(new LiteralControl("<h6>Price:-"));
-                Label lblnm = new Label();
+
                 lblnm.Text = ds.Tables[0].Rows[i]["ProductPrice"].ToString();
                 Panel_productname.Controls.Add(lblnm);
                 Panel_productname.Controls.Add(new LiteralControl("</h6>"));
 
-
+                //decimal a = Convert.ToDecimal(lblnm.Text);
+                //int b = Convert.ToInt32(qnty.Text);
+                //lblnm.Text = (a * b).ToString();
 
                 Button linkmemberview1 = new Button()
                 {
@@ -123,9 +129,12 @@ namespace Admin.E_cart
                 linkmemberview.CausesValidation = false;
                 Panel_productname.Controls.Add(linkmemberview);
 
-            }
-        }
 
+            }
+            Session["qnt"] = qnty.Text;
+
+
+        }
         protected void btn_cancel_Click(object sender, EventArgs e)
         {
             Response.Redirect("index1.aspx");
@@ -138,34 +147,58 @@ namespace Admin.E_cart
             // Get the APID from the CommandArgument
             Button btn = (Button)sender;
             string apid = btn.CommandArgument;
-
-                Response.Redirect("check.aspx?APID=" + apid);
-            }
-
-        
-
-
-        protected string PhotoBase64ImgSrc(string fileNameandPath)
-        {
-            string base64 = string.Empty;
-            try
-            {
-                if (fileNameandPath == "0" || string.IsNullOrEmpty(fileNameandPath))
-                {
-
-                }
-                else
-                {
-                    byte[] byteArray = File.ReadAllBytes(fileNameandPath);
-                    base64 = Convert.ToBase64String(byteArray);
-                }
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            return string.Format("data:image/gif;base64,{0}", base64);
+            Session["Id"] = apid;
+            // Redirect to the next page with the APID in the query string
+            Response.Redirect("checkout.aspx?APID=" + apid);
         }
 
+        protected void btnPlus_Click(object sender, EventArgs e)
+        {
+            int i = 0;
+            //DataTable dataTable = new DataTable();
+            emsdal da = new emsdal();
+            DataSet ds = new DataSet();
+            ds = da.ProductDetails(APID);
+
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                Session["qnt"] = qnty.Text;
+                int quantity = int.Parse(qnty.Text);
+                if (quantity < 15)
+                {
+                    quantity++;
+                    qnty.Text = quantity.ToString("D2");
+
+                }
+                decimal price = Convert.ToDecimal(ds.Tables[0].Rows[i]["ProductPrice"].ToString());
+                int qnty1 = Convert.ToInt32(qnty.Text);
+
+                lblnm.Text = (price * qnty1).ToString();
+
+            }
+        }
+        protected void btnMinus_Click(object sender, EventArgs e)
+        {
+            int i = 0;
+            //DataTable dataTable = new DataTable();
+            emsdal da = new emsdal();
+            DataSet ds = new DataSet();
+            ds = da.ProductDetails(APID);
+
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                int quantity = int.Parse(qnty.Text);
+                if (quantity > 1)
+                {
+                    quantity--;
+                    qnty.Text = quantity.ToString("D2"); // Format as "01", "02", etc.
+
+                    decimal price = Convert.ToDecimal(ds.Tables[0].Rows[i]["ProductPrice"].ToString());
+                    int qnty1 = Convert.ToInt32(qnty.Text);
+
+                    lblnm.Text = (price * qnty1).ToString();
+                }
+            }
+        }
     }
 }

@@ -13,33 +13,6 @@ namespace Admin.E_cart {
     public partial class checkout {
         
         /// <summary>
-        /// userId_label control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder userId_label;
-        
-        /// <summary>
-        /// Button_change control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button_change;
-        
-        /// <summary>
-        /// btn_cnfrmcheckout control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_cnfrmcheckout;
-        
-        /// <summary>
         /// txt_frstname control.
         /// </summary>
         /// <remarks>
@@ -211,22 +184,13 @@ namespace Admin.E_cart {
         protected global::System.Web.UI.WebControls.TextBox multitxt;
         
         /// <summary>
-        /// btn_submitt control.
+        /// btnRegister control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_submitt;
-        
-        /// <summary>
-        /// Button3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton Button3;
+        protected global::System.Web.UI.WebControls.Button btnRegister;
         
         /// <summary>
         /// panl control.
@@ -236,15 +200,6 @@ namespace Admin.E_cart {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel panl;
-        
-        /// <summary>
-        /// pnel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnel;
         
         /// <summary>
         /// Subtotal control.
@@ -299,14 +254,5 @@ namespace Admin.E_cart {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Prc;
-        
-        /// <summary>
-        /// btn_next control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_next;
     }
 }

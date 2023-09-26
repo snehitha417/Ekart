@@ -12,15 +12,12 @@
     <meta name="description" content="GVR - eCommerce"/>
     <meta name="author" content="p-themes"/>
     <!-- Favicon -->
-     <title>GVR-E-CART</title>
-      <link href="../banner/logo.jpeg" type="../banner/logo.jpeg" rel="icon"/>
-
-  <%--  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/icons/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/icons/apple-touch-icon.png"/>
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icons/favicon-32x32.png"/>
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/icons/favicon-16x16.png"/>
     <link rel="manifest" href="assets/images/icons/site.html"/>
     <link rel="mask-icon" href="assets/images/icons/safari-pinned-tab.svg" color ="#666666"/>
-    <link rel="shortcut icon" href="assets/images/logo.png"/>--%>
+    <link rel="shortcut icon" href="assets/images/logo.png"/>
     <meta name="apple-mobile-web-app-title" content="Molla"/>
     <meta name="application-name" content="Molla"/>
     <meta name="msapplication-TileColor" content="#cc9966"/>
@@ -48,105 +45,100 @@
     <script src="assets/js/jquery.countdown.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/demos/demo-2.js"></script>
+    <title>GVR - eCommerce product</title>
+
+    <style>
+   input-spinner{
+            background-repeat :no-repeat;
+        }
+      
+            input,
+textarea {
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
+  margin: 0;
+  outline: none;
+  padding: 10px;
+}
+
+input[type="button"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+.input-group {
+  clear: both;
+  margin: 15px 0;
+  position: relative;
+}
+
+.input-group input[type='button'] {
+  background-color: #eeeeee;
+  min-width: 38px;
+  width: auto;
+  transition: all 300ms ease;
+}
+
+.input-group .button-minus,
+.input-group .button-plus {
+  font-weight: bold;
+  height: 38px;
+  padding: 0;
+  width: 38px;
+  position: relative;
+}
+
+.input-group .quantity-field {
+  position: relative;
+  height: 38px;
+  left: -6px;
+  text-align: center;
+  width: 62px;
+  display: inline-block;
+  font-size: 13px;
+  margin: 0 0 5px;
+  resize: vertical;
+}
+
+.button-plus {
+  left: -13px;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  -webkit-appearance: none;
+}
+
+.wrapper{
+    height:50px;
+    min-width:100px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    background:#fff;
+    border-radius:12px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+.wrapper span {
+    width:35%;
+    text-align:center;
+    font-size:18px;
+    font-weight:100;
+    cursor:pointer;
+}
+
+.wrapper span.num{
+     font-size:18px;
+     border-right:2px solid rgba(0,0,0,0.2);
+     border-left:2px solid rgba(0,0,0,0.2);
+     pointer-events:none;
+     
+}
+    </style>
+
+
    
-<%--   <style>
-
-Copy code
-/* CSS for the container holding the image */
-.image-container {
-  position: relative;
-  overflow: hidden;
-}
-
-/* CSS for the image */
-.image-container img {
-  transition: transform 0.3s ease;
-}
-
-/* CSS for the zoomed-in image */
-.image-container img.zoomed-in {
-  transform: scale(1.2); /* Adjust the scale value for the desired zoom level */
-}
-  
- 
-* {box-sizing: border-box;}
-
-.img-zoom-container {
-  position: relative;
-}
-
-.img-zoom-lens {
-  position: absolute;
-  border: 1px solid #d4d4d4;
-  /*set the size of the lens:*/
-  width: 40px;
-  height: 40px;
-}
-
-.img-zoom-result {
-  border: 1px solid #d4d4d4;
-  /*set the size of the result div:*/
-  width: 300px;
-  height: 300px;
-}
-</style>--%>
-<%--<script>
-function imageZoom(imgID, resultID) {
-  var img, lens, result, cx, cy;
-  img = document.getElementById(imgID);
-  result = document.getElementById(resultID);
-  /*create lens:*/
-  lens = document.createElement("DIV");
-  lens.setAttribute("class", "img-zoom-lens");
-  /*insert lens:*/
-  img.parentElement.insertBefore(lens, img);
-  /*calculate the ratio between result DIV and lens:*/
-  cx = result.offsetWidth / lens.offsetWidth;
-  cy = result.offsetHeight / lens.offsetHeight;
-  /*set background properties for the result DIV:*/
-  result.style.backgroundImage = "url('" + Panel_p1 + "')";
-  result.style.backgroundSize = (img.width * cx) + "px " + (img.height * cy) + "px";
-  /*execute a function when someone moves the cursor over the image, or the lens:*/
-  lens.addEventListener("mousemove", moveLens);
-  img.addEventListener("mousemove", moveLens);
-  /*and also for touch screens:*/
-  lens.addEventListener("touchmove", moveLens);
-  img.addEventListener("touchmove", moveLens);
-  function moveLens(e) {
-    var pos, x, y;
-    /*prevent any other actions that may occur when moving over the image:*/
-    e.preventDefault();
-    /*get the cursor's x and y positions:*/
-    pos = getCursorPos(e);
-    /*calculate the position of the lens:*/
-    x = pos.x - (lens.offsetWidth / 2);
-    y = pos.y - (lens.offsetHeight / 2);
-    /*prevent the lens from being positioned outside the image:*/
-    if (x > img.width - lens.offsetWidth) {x = img.width - lens.offsetWidth;}
-    if (x < 0) {x = 0;}
-    if (y > img.height - lens.offsetHeight) {y = img.height - lens.offsetHeight;}
-    if (y < 0) {y = 0;}
-    /*set the position of the lens:*/
-    lens.style.left = x + "px";
-    lens.style.top = y + "px";
-    /*display what the lens "sees":*/
-    result.style.backgroundPosition = "-" + (x * cx) + "px -" + (y * cy) + "px";
-  }
-  function getCursorPos(e) {
-    var a, x = 0, y = 0;
-    e = e || window.event;
-    /*get the x and y positions of the image:*/
-    a = img.getBoundingClientRect();
-    /*calculate the cursor's x and y coordinates, relative to the image:*/
-    x = e.pageX - a.left;
-    y = e.pageY - a.top;
-    /*consider any page scrolling:*/
-    x = x - window.pageXOffset;
-    y = y - window.pageYOffset;
-    return {x : x, y : y};
-  }
-}
-</script>--%>
     </head>
 <body>
 
@@ -162,6 +154,8 @@ function imageZoom(imgID, resultID) {
                             <a href="index1.aspx" class="sf-with-ul">Home</a></li>
 
                        <li>  <a href="category.aspx" class="sf-with-ul">Product</a> </li>
+                    
+
                         <li>
                             <a href="#" class="sf-with-ul">Pages</a>
 
@@ -176,7 +170,11 @@ function imageZoom(imgID, resultID) {
                                 <li><a href="coming-soon.html">Coming Soon</a></li>
                             </ul>
                         </li>
+
+
                         <li><a href="contact.aspx" class="sf-with-ul">Contact</a>  </li>
+
+
                     </ul>
               
             </div>
@@ -195,7 +193,7 @@ function imageZoom(imgID, resultID) {
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                         <li class="breadcrumb-item"><a href="#">Products</a></li>
-                       
+                        <li class="breadcrumb-item active" aria-current="page">Default</li>
                     </ol>
 
                    <%-- <nav class="product-pager ml-auto" aria-label="Product">
@@ -227,7 +225,9 @@ function imageZoom(imgID, resultID) {
                                         <figure class="product-main-image ">
                                             <div class="image-container"  >
 
-                                                <asp:Panel  runat="server" ID="Panel_p1" > </asp:Panel>
+                                                <asp:Panel  runat="server" ID="Panel_p1" >
+
+                                                </asp:Panel>
 
                                             </div>
                                       </figure>
@@ -244,9 +244,69 @@ imageZoom("myimage", "myresult");
                            <div class="col-md-7">
                                 <div class="product-details">
                                     <h1 class="product-title">
-                                         <asp:Panel  runat="server" ID="Panel_productname" > </asp:Panel>
+                                         <asp:Panel  runat="server" ID="Panel_productname" >
+                                              
+                                         </asp:Panel>
+
                                     </h1>
-                               </div> 
+                                   
+                                       <div class="wrapper">
+    <asp:Button ID="btnMinus" runat="server" Text=" - " OnClientClick="return " OnClick="btnMinus_Click" />
+    <asp:Label class="num" ID="qnty" runat="server" style="width:50px;font-size: x-large;
+    font-weight: 600;" Text="01">
+       
+    </asp:Label>
+    <asp:Button ID="btnPlus" runat="server" Text=" + " OnClientClick="return " OnClick="btnPlus_Click" />
+</div> 
+                              <%--   <div class="input-group">
+
+  <input type="button"  value="-" data-type="minus" class="button-minus" data-field="quantity" />
+
+  <input type="number" step="1"   max="10" value="1"  name="quantity" class="quantity-field" />
+
+  <input type="button" value="+"  data-type="plus" class="button-plus" data-field="quantity" />
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  function incrementValue(e) {
+    e.preventDefault();
+    var fieldName = $(e.target).data('field');
+    var parent = $(e.target).closest('.input-group'); // Use the correct selector '.input-group'
+    var currentVal = parseInt(parent.find('input[name="' + fieldName + '"]').val(), 10);
+
+    if (!isNaN(currentVal)) {
+      parent.find('input[name="' + fieldName + '"]').val(currentVal + 1);
+    } else {
+      parent.find('input[name="' + fieldName + '"]').val(0);
+    }
+  }
+
+  function decrementValue(e) {
+    e.preventDefault();
+
+    var fieldName = $(e.target).data('field');
+    var parent = $(e.target).closest('.input-group'); // Use the correct selector '.input-group'
+    var currentVal = parseInt(parent.find('input[name="' + fieldName + '"]').val(), 10);
+
+    if (!isNaN(currentVal) && currentVal > 0) {
+      parent.find('input[name="' + fieldName + '"]').val(currentVal - 1);
+    } else {
+      parent.find('input[name="' + fieldName + '"]').val(0);
+    }
+  }
+
+  $('.input-group').on('click', '.button-plus', function (e) {
+    incrementValue(e);
+  });
+
+  $('.input-group').on('click', '.button-minus', function (e) {
+    decrementValue(e);
+  });
+</script>--%>
+
+                                                </div> 
 
                                   <%--  <div class="details-filter-row details-row-size">
                                         <label for="qty">Qty:</label>
@@ -262,6 +322,9 @@ imageZoom("myimage", "myresult");
                               </form>    
 
                 <!==================================product ends here====================================>
+
+                   
+             
 
         <footer class="footer">
         	<div class="footer-middle">
@@ -344,7 +407,7 @@ imageZoom("myimage", "myresult");
     <button id="scroll-top" title="Back to Top"><i class="icon-arrow-up"></i></button>
 
 
-    <!===========================FORM SIGN IN & SINGN UP==================>
+    <! ===========================  FORM SIGN IN & SINGN UP  ================== >
 
 
     <!-- Sign in / Register Modal -->
