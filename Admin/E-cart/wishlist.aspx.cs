@@ -131,7 +131,7 @@ namespace Admin.E_cart
 
                         if (rowAffected > 0)
                         {
-                            ScriptManager.RegisterStartupScript(this, typeof(string), "send", "alert('successfully Removed');", true);
+                            ScriptManager.RegisterStartupScript(this, typeof(string), "send", "showModal();", true);
 
                         }
                         else

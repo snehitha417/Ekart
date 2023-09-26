@@ -252,29 +252,7 @@
         }
 
         /*-------modal pop box ----styles------*/
-        .modal {
-            position: fixed;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #cccccc;
-            opacity: 0;
-            visibility: hidden;
-            transform: scale(1.1);
-            transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
-        }
-
-        .modal-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: #eeeeee;
-            padding: 1rem 1.5rem;
-            width: 24rem;
-            border-radius: 0.5rem;
-        }
+        
 
         .close-button {
             float: right;
@@ -290,11 +268,33 @@
                 background-color: #adadad;
             }
 
-        .show-modal {
-            opacity: 1;
-            visibility: visible;
-            transform: scale(1.0);
-            transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+        
+
+
+        .modal-backdrop {
+            opacity: 0; /* Hide the backdrop by making it completely transparent */
+            display: none; /* Hide the backdrop by default */
+        }
+
+        modal-content {
+            height: 300px;
+            flex-direction: initial;
+            width: 84%;
+            border-radius: 0.5rem;
+            text-align: center;
+            margin-top: 270px;
+        }
+        /*-------modal pop box ----styles------*/
+
+        .modal-dialog
+        {
+            background: azure;
+        }
+       
+
+        .modal-body {
+            font-size: 20px;
+            text-align: center;
         }
     </style>
 
@@ -1314,6 +1314,53 @@
      
    
         </div>
+
+
+         <div class="modal fade show" id="myModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content" style="margin-top: 270px;">
+                    <div class="modal-header">
+
+                        <h4 class="modal-title" id="myModalLabel" style="text-align: center;">Added to Cart</h4>
+                        &nbsp;&nbsp;
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                    </div>
+                    <br />
+                    <div class="modal-body">
+                        Item has been added to the cart successfully.
+                    </div>
+                    <br />
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary btn-sm btn-shadow" data-dismiss="modal">Ok</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+         <div class="modal fade show" id="myModal1" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content" style="margin-top: 270px;">
+                    <div class="modal-header">
+
+                        <h4 class="modal-title" id="myModalLabel1" style="text-align: center;">Added to Wishlist</h4>
+                        &nbsp;&nbsp;
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                    </div>
+                    <br />
+                    <div class="modal-body">
+                        Item has been added to the Wishlist successfully.
+                    </div>
+                    <br />
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary btn-sm btn-shadow" data-dismiss="modal">Ok</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </form>
 
 

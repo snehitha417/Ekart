@@ -253,7 +253,7 @@ namespace Admin.E_cart
             DataSet ds = new DataSet();
             ds = emsdal.ins_tbl_cart(APID, "", "", "", "", "");
 
-            string script = "<script> alert('Item is added to the cart');</script>";
+            string script = "<script>$('#myModal').modal('show');</script>";
             ClientScript.RegisterStartupScript(this.GetType(), "popupscript", script);
 
             binddataofrp1();
@@ -319,7 +319,7 @@ namespace Admin.E_cart
             ds = emsdal.ins_tbl_cart(APID, "", "", "", "", "");
 
 
-            string script = "<script> alert('Item is added to the cart');</script>";
+            string script = "<script>$('#myModal').modal('show');</script>";
             ClientScript.RegisterStartupScript(this.GetType(), "popupscript", script);
 
 
@@ -341,7 +341,7 @@ namespace Admin.E_cart
             DataSet ds = new DataSet();
             ds = emsdal.ins_tbl_wishlist1(APID, "", "");
 
-            string script = "<script> alert('Item is added to the Wishlist');</script>";
+            string script = "<script>$('#myModal1').modal('show');</script>";
             ClientScript.RegisterStartupScript(this.GetType(), "popupscript", script);
 
             binddataofrp1();

@@ -43,6 +43,28 @@
         img{
             width:30%;
         }
+
+         .modal-backdrop {
+            opacity: 0; /* Hide the backdrop by making it completely transparent */
+            display: none; /* Hide the backdrop by default */
+        }
+
+        modal-content {
+            height: 300px;
+            flex-direction: initial;
+            width: 84%;
+            border-radius: 0.5rem;
+            text-align: center;
+            margin-top: 270px;
+        }
+         .modal-body {
+            font-size: 20px;
+            text-align: center;
+        }
+         .modal-dialog
+        {
+            background: azure;
+        }
     </style>
 </head>
 <body>
@@ -512,6 +534,33 @@
             </div><!-- End .modal-content -->
         </div><!-- End .modal-dialog -->
     </div><!-- End .modal -->
+
+
+        <div class="modal fade show" id="myModal1" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content" style="margin-top: 270px; background-color: ghostwhite;">
+                    <div class="modal-header">
+
+                        <h4 class="modal-title" id="myModalLabel1" style="text-align: center;">Removed to Wishlist</h4>
+                        &nbsp;&nbsp;
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                    </div>
+                    <br />
+                    <div class="modal-body">
+                        Item has been Removed to the Wishlist successfully.
+                    </div>
+                    <br />
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary btn-sm btn-shadow" data-dismiss="modal">Ok</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
 
     <!-- Plugins JS File -->
     <script src="assets/js/jquery.min.js"></script>
