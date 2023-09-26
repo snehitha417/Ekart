@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#"  AutoEventWireup="true" CodeBehind="checkout.aspx.cs" Inherits="Admin.E_cart.checkout" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="checkout.aspx.cs" Inherits="Admin.E_cart.checkout" %>
 
 <!DOCTYPE html>
 
@@ -8,63 +8,33 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>GVR-E-CART</title>
+    <title>GVR - eCommerce</title>
     <meta name="keywords" content="HTML5 Template" />
     <meta name="description" content="GVR - eCommerce" />
     <meta name="author" content="p-themes" />
-
-    <link href="../banner/logo.jpeg" type="../banner/logo.jpeg" rel="icon" />
-
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/icons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/icons/favicon-16x16.png" />
+    <link rel="manifest" href="assets/images/icons/site.html" />
+    <link rel="mask-icon" href="assets/images/icons/safari-pinned-tab.svg" color="#666666" />
+    <link rel="shortcut icon" href="assets/images/logo.png" />
+    <meta name="apple-mobile-web-app-title" content="Molla" />
+    <meta name="application-name" content="Molla" />
+    <meta name="msapplication-TileColor" content="#cc9966" />
+    <meta name="msapplication-config" content="assets/images/icons/browserconfig.xml" />
+    <meta name="theme-color" content="#ffffff" />
     <!-- Plugins CSS File -->
-
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/css/plugins/owl-carousel/owl.carousel.css" />
-    <link rel="stylesheet" href="assets/css/plugins/magnific-popup/magnific-popup.css" />
-    <link rel="stylesheet" href="assets/css/plugins/jquery.countdown.css" />
-
     <!-- Main CSS File -->
-
     <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/skins/skin-demo-2.css" />
-    <link rel="stylesheet" href="assets/css/demos/demo-2.css" />
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <!-- Plugins JS File -->
-
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/jquery.hoverIntent.min.js"></script>
-    <script src="assets/js/jquery.waypoints.min.js"></script>
-    <script src="assets/js/superfish.min.js"></script>
-    <script src="assets/js/owl.carousel.min.js"></script>
-    <script src="assets/js/wNumb.js"></script>
-    <script src="assets/js/bootstrap-input-spinner.js"></script>
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
-    <script src="assets/js/nouislider.min.js"></script>
-    <!-- Main JS File -->
-
-
-    <style>
-        .cardb {
-            background-color: #eee;
-            overflow-y: scroll;
-        }
-
-
-            .cardb::-webkit-scrollbar {
-                display: none;
-            }
-    </style>
-
-
 </head>
 
 <body>
+
     <div class="container">
         <div class="navbar navbar-expand-lg">
+
             <a href="index1.aspx" class="navbar-brand">
                 <img src="assets/images/demos/demo-2/logo.png" alt="Molla Logo" style="width: 110px;" />
             </a>
@@ -74,6 +44,7 @@
 
                 <li><a href="category.aspx" class="sf-with-ul">Product</a> </li>
 
+
                 <li>
                     <a href="#" class="sf-with-ul">Pages</a>
 
@@ -82,7 +53,7 @@
                         <li><a href="contact.aspx" class="sf-with-ul">Contact</a> </li>
 
                         <li><a href="login.html">Login</a></li>
-                        <li><a href="blog.aspx">Blog</a></li>
+                             <li><a href="blog.aspx">Blog</a></li>
                         <li><a href="faq.html">FAQs</a></li>
 
                         <li><a href="coming-soon.html">Coming Soon</a></li>
@@ -103,307 +74,232 @@
 
     <!=================================NAV BAR ENDS HERE==================================>
 
+
+       
+
+
     <main class="main">
         <div class="page-header text-center" style="background-image: url('assets/images/page-header-bg.jpg')">
             <div class="container">
                 <h1 class="page-title">Checkout<span>Shop</span></h1>
             </div>
-
+            
         </div>
-
+        
         <br />
         <br />
 
-        <form runat="server">
+        <div class="page-content">
+            <div class="checkout">
+                <div class="container">
 
-            <div class="container">
-                <div class="col-lg-12">
-                    <div class="row">
+                    <form runat="server">
 
-                        <div class="col-lg-9">
-                            <div class="cardb bg-light p-5">
-                                <!================================CARD uSER PROFILE STARTS HERE ===============================>
+
+                        <div class="row">
+                            <div class="col-lg-7">
+
+                                <h2 class="checkout-title">Billing Details</h2>
+
                                 <div class="row">
-                                    <div class="card bg-white shadow p-5">
-                                        <div class="row">
-                                            <div class="col-lg-8">
+                                    <div class="col-sm-6">
+                                        <label>First Name *</label>
 
-                                                <span><b>LOGIN</b> &nbsp  
-                                                   <i class="fa-solid fa-square-check fa-1x" style="color: #146aff;"></i>
-                                                </span>
-                                                <div style="width: 50rem;">
+                                        <asp:TextBox ID="txt_frstname" runat="server" type="text" Class="form-control"  placeholder="Enter Your First Name " />
 
-                                                    <%-- <b>Sweety</b>--%>
+                                        <asp:RequiredFieldValidator ID="frstrname" runat="server" ControlToValidate="txt_frstname" ForeColor="Red" ErrorMessage="Please Enter your First Name"> 
+                                        </asp:RequiredFieldValidator>
 
-                                                    <asp:PlaceHolder ID="userId_label" runat="server">
-                                                        <%=HttpContext.Current.Session["UserId"] %>, </asp:PlaceHolder>
-                                                </div>
-                                            </div>
-
-
-                                            <div class="col-lg-2">
-                                                <asp:Button ID="Button_change" runat="server" Text="change"
-                                                    Style="margin-left: 7rem; background-color: #17a2b8; color: white; border: none;"
-                                                    OnClick="Button_change_Click" />
-                                            </div>
-
-                                        </div>
                                     </div>
 
-
-                                    <div id="continuecheckout">
-                                        <asp:Button ID="btn_cnfrmcheckout" runat="server" Class="btn" Text="Continue to CheckOut"
-                                            Visible="false" Style="background-color:#062b60; color:white;" />
+                                    <div class="col-sm-6">
+                                        <label>Last Name *</label>
+                                        <asp:TextBox ID="txt_lst" runat="server" type="text" Class="form-control"  placeholder="Enter your Last Name" />
+                                        <asp:RequiredFieldValidator ID="lstname" runat="server" ControlToValidate="txt_lst" ForeColor="Red" ErrorMessage="Please Enter your Last Name"> 
+                                        </asp:RequiredFieldValidator>
                                     </div>
                                 </div>
+
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <label>Email ID *</label>
+                                        <asp:TextBox ID="txt_email" runat="server" TextMode="Email" Class="form-control" placeholder="Enter Valid Email Id" />
+
+                                        <asp:RequiredFieldValidator ID="email" runat="server" ControlToValidate="txt_email" ForeColor="Red" ErrorMessage=" Please Enter your Email Id"> 
+                                        </asp:RequiredFieldValidator>
+
+                                    </div>
+
+
+
+                                    <div class="col-sm-6">
+                                        <label>Phone *</label>
+                                        <asp:TextBox ID="txt_phoneno" runat="server" type="text" Class="form-control" placeholder="Enter your Phoneno " />
+
+                                        <asp:RequiredFieldValidator ID="phoneno" runat="server" ControlToValidate="txt_phoneno" ForeColor="Red" ErrorMessage="Please Enter your Phoneno"> 
+                                        </asp:RequiredFieldValidator>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+
+                                    <div class="col-sm-6">
+                                        <label style="float: left">Street address *</label>
+
+                                        <asp:TextBox ID="txt_strt" runat="server" type="text" Class="form-control" placeholder="House No and Street name" />
+
+                                        <asp:RequiredFieldValidator ID="strtadd" runat="server" ControlToValidate="txt_strt" ForeColor="Red" ErrorMessage="Please enter your Address"> 
+                                          </asp:RequiredFieldValidator>
+                                    </div>
+
+                                    <div class="col-sm-6">
+                                        <label>Country *</label>
+
+                                        <asp:TextBox ID="txt_country" runat="server" type="text" Class="form-control" placeholder="House No and Street name" />
+                                        
+                                        <asp:RequiredFieldValidator ID="cntry" runat="server" ControlToValidate="txt_country" ForeColor="Red" ErrorMessage="Please enter your country"> 
+                                        </asp:RequiredFieldValidator>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <label>City *</label>
+
+                                        <asp:TextBox ID="txt_city" runat="server" type="text" Class="form-control" placeholder="Enter your city Name" />
+                                      
+                                          <asp:RequiredFieldValidator ID="cty" runat="server" ControlToValidate="txt_city" ForeColor="Red" ErrorMessage="Please enter your city Name"> 
+                                          </asp:RequiredFieldValidator>
+                                    </div>
+
+                                    <div class="col-sm-6">
+                                        <label>state *</label>
+                                        <asp:TextBox runat="server" ID="txt_state" Class="form-control" placeholder="Enter your state"></asp:TextBox>
+                                       
+                                         <asp:RequiredFieldValidator ID="sta" runat="server" ControlToValidate="txt_state" ForeColor="Red" ErrorMessage="Please enter your state"> 
+                                          </asp:RequiredFieldValidator>
+                                    </div>
+                                </div>
+
+
+
+                                <label>Pincode *</label>
+                                <asp:TextBox ID="txt_zip" runat="server" type="text" Class="form-control" placeholder="Enter your Pincode" />
+
+                                <asp:RequiredFieldValidator ID="zip" runat="server" ControlToValidate="txt_zip" ForeColor="Red" ErrorMessage="Please enter your Pincode"> 
+                               </asp:RequiredFieldValidator>
+
+
+                                <label style="float: left">Order notes (optional)</label>
+
+                                <asp:TextBox ID="multitxt" runat="server" TextMode="MultiLine" class="form-control" cols="30" Rows="4" placeholder="Notes about your order,"></asp:TextBox>
+
+                                <asp:Button ID="btnRegister" runat="server" Text="Save Address" Style="height: 40px; text-align: center; width: 118px; margin-left: 10rem; margin-top: 2rem; margin-top: 0rem; margin-bottom: 21px; background-color: #17a2b8; color: white; border: none; border-radius: 36px;" OnClick="btnRegister_Click" />
+
+
+                    <!--------------------------------->
+
+                               
                             </div>
 
-                            <!================================CARD uSER PROFILE ENDS  HERE ===============================>
-                                <br />
-
-                            <!================================CARD DELIVERY ADDRESS STARTS HERE  ===============================>
-                                <div class="row">
-                                    <div class="card bg-white shadow">
-                                        <div class=" card-head bg-light p-3">
-                                            <h4 class="text-dark">Delivery Address </h4>
-                                        </div>
-
-                                        <div class="row">
-                                            <div class="col-lg-8">
-                                                <p class="p-4">
-                                                    making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-                                                </p>
-                                            </div>
-
-                                            <div class="col-lg-3">
-                                                <button class="btn btn-warning" style="margin-top: 55px;">
-                                                    edit
-                                                </button>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            <!================================CARD DELIVERY ADDRESS ENDS HERE  ===============================>
-                                <br />
-
-                            <!================================CARD ADD  ++++ ADDRESS STARTS HERE  ===============================>
-
-                                     <div class="row">
-                                         <div class="card bg-white shadow" style="width: 82rem;">
-                                             <div class="accordion-summary" id="accordion-payment">
-
-                                                 <div class="card p-3">
-                                                     <div class="card-body ">
-                                                         <h6><a role="button" data-toggle="collapse" href="#collapse-1" aria-expanded="true" aria-controls="collapse-1">
-                                                             <i class="fa-solid fa-plus fa-1x" style="color: #005eff;"></i>Add New Address </a></h6>
-                                                     </div>
-                                                     <div id="collapse-1" class="collapse" aria-labelledby="heading-1" data-parent="#accordion-payment">
-                                                         <div class="card-body">
-                                                             <div class="col-lg-12">
-
-                                                                 <div class="row">
-                                                                     <div class="col-lg-6">
-                                                                         <label>First Name *</label>
-
-                                                                         <asp:TextBox ID="txt_frstname" runat="server" type="text" Class="form-control" />
-
-                                                                         <asp:RequiredFieldValidator ID="frstrname" runat="server" ControlToValidate="txt_frstname" ForeColor="Red" ErrorMessage="Please Enter your First Name"> 
-                                                                           </asp:RequiredFieldValidator>
-
-                                                                     </div>
-
-                                                                     <div class="col-lg-6">
-                                                                         <label>Last Name *</label>
-                                                                         <asp:TextBox ID="txt_lst" runat="server" type="text" Class="form-control" />
-                                                                         <asp:RequiredFieldValidator ID="lstname" runat="server" ControlToValidate="txt_lst" ForeColor="Red" ErrorMessage="Please Enter your Last Name"> 
-                                                                          </asp:RequiredFieldValidator>
-                                                                     </div>
-                                                                 </div>
-
-                                                                 <div class="row">
-                                                                     <div class="col-sm-6">
-                                                                         <label>Email address *</label>
-                                                                         <asp:TextBox ID="txt_email" runat="server" TextMode="Email" Class="form-control" placeholder="Enter Valid Email Id" />
-
-                                                                         <asp:RequiredFieldValidator ID="email" runat="server" ControlToValidate="txt_email" ForeColor="Red" ErrorMessage=" Please Enter your Email Id"> 
-                                                                          </asp:RequiredFieldValidator>
-
-                                                                     </div>
+                           
+                            <!=========================form ends here=========================>
 
 
+          <!=========================order details ============== starts here =========================>
 
-                                                                     <div class="col-sm-6">
-                                                                         <label>Phone *</label>
-                                                                         <asp:TextBox ID="txt_phoneno" runat="server" type="text" Class="form-control" placeholder="Enter your Phoneno " />
+		                	 <aside class="col-lg-5">
+                                <div class="summary">
+                                    <h3 class="summary-title">Your Order</h3>
 
-                                                                         <asp:RequiredFieldValidator ID="phoneno" runat="server" ControlToValidate="txt_phoneno" ForeColor="Red" ErrorMessage="Please Enter your Phoneno"> 
-                                                                          </asp:RequiredFieldValidator>
-                                                                     </div>
-                                                                 </div>
+                                    <table class="table table-summary">
+                                        <thead>
+                                            <tr>
 
-                                                                 <div class="row">
+                                                <th>ProductName</th>
+                                                <th></th>
+                                                <%--<th style="visibility:hidden">Quantity</th>--%>
+                                                <th>Total</th>
+                                            </tr>
+                                        </thead>
 
-                                                                     <div class="col-sm-6">
-                                                                         <label style="float: left">Street address *</label>
-
-                                                                         <asp:TextBox ID="txt_strt" runat="server" type="text" Class="form-control" placeholder="Enter your Street Name" />
-
-                                                                         <asp:RequiredFieldValidator ID="strtadd" runat="server" ControlToValidate="txt_strt" ForeColor="Red" ErrorMessage="Please enter your Street name"> 
-                                                                            </asp:RequiredFieldValidator>
-                                                                     </div>
-
-                                                                     <div class="col-sm-6">
-                                                                         <label>Country *</label>
-
-                                                                         <asp:TextBox ID="txt_country" runat="server" type="text" Class="form-control" placeholder="Enter your Country" />
-                                                                         <asp:RequiredFieldValidator ID="cntry" runat="server" ControlToValidate="txt_country" ForeColor="Red" ErrorMessage="Please enter your country"> 
-                                                                           </asp:RequiredFieldValidator>
-                                                                     </div>
-
-                                                                 </div>
-
-
-                                                                 <div class="row">
-                                                                     <div class="col-sm-6">
-                                                                         <label>City *</label>
-
-                                                                         <asp:TextBox ID="txt_city" runat="server" type="text" Class="form-control" placeholder="Enter your city Name" />
-                                                                         <asp:RequiredFieldValidator ID="cty" runat="server" ControlToValidate="txt_city" ForeColor="Red" ErrorMessage="Please enter your city"> 
-                                                                             </asp:RequiredFieldValidator>
-                                                                     </div>
-
-                                                                     <div class="col-sm-6">
-                                                                         <label>state *</label>
-                                                                         <asp:TextBox runat="server" ID="txt_state" Class="form-control" placeholder="Enter your state"></asp:TextBox>
-                                                                         <asp:RequiredFieldValidator ID="sta" runat="server" ControlToValidate="txt_state" ForeColor="Red" ErrorMessage="Please enter your State"> 
-                                                                          </asp:RequiredFieldValidator>
-                                                                     </div>
-                                                                 </div>
-
-
-
-                                                                 <label>Pincode *</label>
-                                                                 <asp:TextBox ID="txt_zip" runat="server" type="text" Class="form-control" placeholder="Enter your Pincode" />
-
-                                                                 <asp:RequiredFieldValidator ID="zip" runat="server" ControlToValidate="txt_zip" ForeColor="Red" ErrorMessage="Please enter your Pincode"> 
-                                                                     </asp:RequiredFieldValidator>
-
-
-                                                                 <label style="float: left">Order notes (optional)</label>
-                                                                 <asp:TextBox ID="multitxt" runat="server" TextMode="MultiLine" class="form-control" cols="30" Rows="4" placeholder="Notes about your order,"></asp:TextBox>
-
-
-                                                                 <asp:Button ID="btn_submitt" runat="server" Text="Save Address and Deliver Here" Style="height: 40px; text-align: center; width: auto; margin-left: 10rem; margin-top: 2rem; margin-top: 0rem; margin-bottom: 21px; background-color: #17a2b8; color: white; border: none;" OnClick="btnsubmitt_Click" />
-
-                                                                 <button runat="server" id="Button3" style="width: 128px; margin-top: 7px; margin-left: 10rem; height: 41px; background-color: white; border-color: #54ccef;">
-                                                                     Cancel</button>
-                                                             </div>
-                                                         </div>
-                                                     </div>
-                                                 </div>
-                                             </div>
-                                         </div>
-                                     </div>
-
-                            <!================================CARD ADD  ++++ ADDRESS ENDS HERE  ===============================>
+                                        <tbody>
+                                         
+                                            <tr>
+                                                <asp:Panel ID="panl" runat="server" > </asp:Panel>
+                                               
+                                            </tr>
+                                           
+                                            <!-- End .summary-subtotal -->
+                                           <tr class="summary-subtotal">
+		                							<td>Subtotal:</td>
+		                							<td><asp:Label ID="Subtotal" runat="server" Text=""></asp:Label></td>
+		                						</tr><!-- End .summary-subtotal -->
+                                                <tr>
+		                							<td>GST<br />
+                                                        <span>(GST = 06%)</span>
+                                                       
+		                							</td> 
+                                                    <td><asp:Label ID="gst" runat="server" Text=""></asp:Label></td>
+                                                    </tr>
+                                            <tr>
+		                							<td>DisCount<br />
+                                                        <span>(DisCount = 10%)</span>
+                                                        
+		                							</td> 
+                                                    <td><span style="color:red">-</span><asp:Label ID="DisC" runat="server" Text=""></asp:Label></td>
+                                                    </tr>
+                                                <tr>
+		                							<td>Serive Tax:<br />
+                                                        <span>(Serive Tax: = 10%)</span>
+                                                        
+		                							</td>
+                                                    <td><asp:Label ID="tax" runat="server" Text=""></asp:Label></td>
+                                                   </tr>
+                                                <tr>
+                                                    <td>Delivery Charges</td>
+                                                    <td><asp:Label ID="Delivery" runat="server" Text=""></asp:Label></td>
+		                						</tr>
+		                						<tr class="summary-total">
+		                							<td>Total:</td>
+		                							<td><asp:Label ID="Prc" runat="server" Text=""></asp:Label></td>
+		                						</tr><!-- End .summary-total -->
+                                        </tbody>
+                                    </table>
 
 
-                        </div>
-                    
+                                 </div>
 
-
-                    <aside class="col-lg-3">
-                        <div class="summary">
-                            <h3 class="summary-title">Your Order</h3>
-
-                            <table class="table table-summary">
-                                <thead>
-                                    <tr>
-                                        <th>ProductName</th>
-                                        <th>Total</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            <asp:Panel ID="panl" runat="server"></asp:Panel>
-                                        </td>
-                                        <td>
-                                            <asp:Panel ID="pnel" runat="server"></asp:Panel>
-                                        </td>
-                                    </tr>
-
-                                    <!-- End .summary-subtotal -->
-                                    <tr class="summary-subtotal">
-                                        <td>Subtotal:</td>
-                                        <td>
-                                            <asp:Label ID="Subtotal" runat="server" Text=""></asp:Label></td>
-                                    </tr>
-                                    <!-- End .summary-subtotal -->
-                                    <tr>
-                                        <td>GST<br />
-                                            <span>(GST = 6%)</span>
-                                        </td>
-                                        <td>
-                                            <asp:Label ID="gst" runat="server" Text=""></asp:Label></td>
-                                    </tr>
-                                    <tr>
-                                        <td>DisCount<br />
-                                            <span>(DisCount = 10%)</span>
-
-                                        </td>
-                                        <td><span style="color: red">-</span><asp:Label ID="DisC" runat="server" Text=""></asp:Label></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Serive Tax:<br />
-                                            <span>(Serive Tax: = 10%)</span></td>
-                                        <td>
-                                            <asp:Label ID="tax" runat="server" Text=""></asp:Label></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Delivery Charges</td>
-                                        <td>
-                                            <asp:Label ID="Delivery" runat="server" Text=""></asp:Label></td>
-                                    </tr>
-                                    <tr class="summary-total">
-                                        <td>Total:</td>
-                                        <td>
-                                            <asp:Label ID="Prc" runat="server" Text=""></asp:Label></td>
-                                    </tr>
-                                    <!-- End .summary-total -->
-
-                                </tbody>
-                            </table>
-                            <asp:Button ID="btn_next" runat="server" Text="Next" Style="height: 40px; text-align: center; width: 118px; margin-left: 10rem; margin-top: 2rem; margin-top: 0rem; margin-bottom: 21px; background-color: #f6a21c; color: white; border: none; border-radius: 36px;" />
-
-                        </div>
-
-
-                        <!=========================order details ============== ends  here =========================>  	
+                       
+                                <!=========================order details ============== ends  here =========================>  	
 		                	
-                    </aside>
+                            </aside>
+
+                        </div>
+                    </form>
+
 
                 </div>
+
             </div>
 
-
-      
-
-
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-
-        </form>
+        </div>
 
     </main>
 
 
+
     <!============================================>
+
+
+
+
+       
+
+
+
 
     <footer class="footer">
         <div class="footer-middle">
@@ -411,7 +307,7 @@
                 <div class="row">
                     <div class="col-sm-6 col-lg-3">
                         <div class="widget widget-about">
-                            <img src="assets/images/logo.png" class="footer-logo" alt="Footer Logo" width="105" height="25" />
+                            <img src="assets/images/logo.png" class="footer-logo" alt="Footer Logo" width="105" height="25">
                             <p>Praesent dapibus, neque id cursus ucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. </p>
 
                             <div class="social-icons">
@@ -493,14 +389,344 @@
                 <p class="footer-copyright">Copyright © 2019 Molla Store. All Rights Reserved.</p>
                 <!-- End .footer-copyright -->
                 <figure class="footer-payments">
-                    <img src="assets/images/payments.png" alt="Payment methods" width="272" height="20" />
+                    <img src="assets/images/payments.png" alt="Payment methods" width="272" height="20"/>
                 </figure>
-
+             
             </div>
-
+        
         </div>
-
+  
     </footer>
+
+   
+
+    <button id="scroll-top" title="Back to Top"><i class="icon-arrow-up"></i></button>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-overlay"></div>
+    <!-- End .mobil-menu-overlay -->
+
+    <div class="mobile-menu-container">
+        <div class="mobile-menu-wrapper">
+            <span class="mobile-menu-close"><i class="icon-close"></i></span>
+
+            <form action="#" method="get" class="mobile-search">
+                <label for="mobile-search" class="sr-only">Search</label>
+                <input type="search" class="form-control" name="mobile-search" id="mobile-search" placeholder="Search in..." />
+                <button class="btn btn-primary" type="submit"><i class="icon-search"></i></button>
+            </form>
+
+            <nav class="mobile-nav">
+                <ul class="mobile-menu">
+                    <li class="active">
+                        <a href="index.html">Home</a>
+
+                        <ul>
+                            <li><a href="index-1.html">01 - furniture store</a></li>
+                            <li><a href="index-2.html">02 - furniture store</a></li>
+                            <li><a href="index-3.html">03 - electronic store</a></li>
+                            <li><a href="index-4.html">04 - electronic store</a></li>
+                            <li><a href="index-5.html">05 - fashion store</a></li>
+                            <li><a href="index-6.html">06 - fashion store</a></li>
+                            <li><a href="index-7.html">07 - fashion store</a></li>
+                            <li><a href="index-8.html">08 - fashion store</a></li>
+                            <li><a href="index-9.html">09 - fashion store</a></li>
+                            <li><a href="index-10.html">10 - shoes store</a></li>
+                            <li><a href="index-11.html">11 - furniture simple store</a></li>
+                            <li><a href="index-12.html">12 - fashion simple store</a></li>
+                            <li><a href="index-13.html">13 - market</a></li>
+                            <li><a href="index-14.html">14 - market fullwidth</a></li>
+                            <li><a href="index-15.html">15 - lookbook 1</a></li>
+                            <li><a href="index-16.html">16 - lookbook 2</a></li>
+                            <li><a href="index-17.html">17 - fashion store</a></li>
+                            <li><a href="index-18.html">18 - fashion store (with sidebar)</a></li>
+                            <li><a href="index-19.html">19 - games store</a></li>
+                            <li><a href="index-20.html">20 - book store</a></li>
+                            <li><a href="index-21.html">21 - sport store</a></li>
+                            <li><a href="index-22.html">22 - tools store</a></li>
+                            <li><a href="index-23.html">23 - fashion left navigation store</a></li>
+                            <li><a href="index-24.html">24 - extreme sport store</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="category.html">Shop</a>
+                        <ul>
+                            <li><a href="category-list.html">Shop List</a></li>
+                            <li><a href="category-2cols.html">Shop Grid 2 Columns</a></li>
+                            <li><a href="category.html">Shop Grid 3 Columns</a></li>
+                            <li><a href="category-4cols.html">Shop Grid 4 Columns</a></li>
+                            <li><a href="category-boxed.html"><span>Shop Boxed No Sidebar<span class="tip tip-hot">Hot</span></span></a></li>
+                            <li><a href="category-fullwidth.html">Shop Fullwidth No Sidebar</a></li>
+                            <li><a href="product-category-boxed.html">Product Category Boxed</a></li>
+                            <li><a href="product-category-fullwidth.html"><span>Product Category Fullwidth<span class="tip tip-new">New</span></span></a></li>
+                            <li><a href="cart.html">Cart</a></li>
+                            <li><a href="checkout.html">Checkout</a></li>
+                            <li><a href="wishlist.html">Wishlist</a></li>
+                            <li><a href="#">Lookbook</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="product.html" class="sf-with-ul">Product</a>
+                        <ul>
+                            <li><a href="product.html">Default</a></li>
+                            <li><a href="product-centered.html">Centered</a></li>
+                            <li><a href="product-extended.html"><span>Extended Info<span class="tip tip-new">New</span></span></a></li>
+                            <li><a href="product-gallery.html">Gallery</a></li>
+                            <li><a href="product-sticky.html">Sticky Info</a></li>
+                            <li><a href="product-sidebar.html">Boxed With Sidebar</a></li>
+                            <li><a href="product-fullwidth.html">Full Width</a></li>
+                            <li><a href="product-masonry.html">Masonry Sticky Info</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Pages</a>
+                        <ul>
+                            <li>
+                                <a href="about.html">About</a>
+
+                                <ul>
+                                    <li><a href="about.html">About 01</a></li>
+                                    <li><a href="about-2.html">About 02</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="contact.html">Contact</a>
+
+                                <ul>
+                                    <li><a href="contact.html">Contact 01</a></li>
+                                    <li><a href="contact-2.html">Contact 02</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="login.html">Login</a></li>
+                            <li><a href="faq.html">FAQs</a></li>
+                            <li><a href="404.html">Error 404</a></li>
+                            <li><a href="coming-soon.html">Coming Soon</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="blog.html">Blog</a>
+
+                        <ul>
+                            <li><a href="blog.html">Classic</a></li>
+                            <li><a href="blog-listing.html">Listing</a></li>
+                            <li>
+                                <a href="#">Grid</a>
+                                <ul>
+                                    <li><a href="blog-grid-2cols.html">Grid 2 columns</a></li>
+                                    <li><a href="blog-grid-3cols.html">Grid 3 columns</a></li>
+                                    <li><a href="blog-grid-4cols.html">Grid 4 columns</a></li>
+                                    <li><a href="blog-grid-sidebar.html">Grid sidebar</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Masonry</a>
+                                <ul>
+                                    <li><a href="blog-masonry-2cols.html">Masonry 2 columns</a></li>
+                                    <li><a href="blog-masonry-3cols.html">Masonry 3 columns</a></li>
+                                    <li><a href="blog-masonry-4cols.html">Masonry 4 columns</a></li>
+                                    <li><a href="blog-masonry-sidebar.html">Masonry sidebar</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Mask</a>
+                                <ul>
+                                    <li><a href="blog-mask-grid.html">Blog mask grid</a></li>
+                                    <li><a href="blog-mask-masonry.html">Blog mask masonry</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Single Post</a>
+                                <ul>
+                                    <li><a href="single.html">Default with sidebar</a></li>
+                                    <li><a href="single-fullwidth.html">Fullwidth no sidebar</a></li>
+                                    <li><a href="single-fullwidth-sidebar.html">Fullwidth with sidebar</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="elements-list.html">Elements</a>
+                        <ul>
+                            <li><a href="elements-products.html">Products</a></li>
+                            <li><a href="elements-typography.html">Typography</a></li>
+                            <li><a href="elements-titles.html">Titles</a></li>
+                            <li><a href="elements-banners.html">Banners</a></li>
+                            <li><a href="elements-product-category.html">Product Category</a></li>
+                            <li><a href="elements-video-banners.html">Video Banners</a></li>
+                            <li><a href="elements-buttons.html">Buttons</a></li>
+                            <li><a href="elements-accordions.html">Accordions</a></li>
+                            <li><a href="elements-tabs.html">Tabs</a></li>
+                            <li><a href="elements-testimonials.html">Testimonials</a></li>
+                            <li><a href="elements-blog-posts.html">Blog Posts</a></li>
+                            <li><a href="elements-portfolio.html">Portfolio</a></li>
+                            <li><a href="elements-cta.html">Call to Action</a></li>
+                            <li><a href="elements-icon-boxes.html">Icon Boxes</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <!-- End .mobile-nav -->
+
+            <div class="social-icons">
+                <a href="#" class="social-icon" target="_blank" title="Facebook"><i class="icon-facebook-f"></i></a>
+                <a href="#" class="social-icon" target="_blank" title="Twitter"><i class="icon-twitter"></i></a>
+                <a href="#" class="social-icon" target="_blank" title="Instagram"><i class="icon-instagram"></i></a>
+                <a href="#" class="social-icon" target="_blank" title="Youtube"><i class="icon-youtube"></i></a>
+            </div>
+            <!-- End .social-icons -->
+        </div>
+        <!-- End .mobile-menu-wrapper -->
+    </div>
+    <!-- End .mobile-menu-container -->
+
+    <!-- Sign in / Register Modal -->
+    <div class="modal fade" id="signin-modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i class="icon-close"></i></span>
+                    </button>
+
+                    <div class="form-box">
+                        <div class="form-tab">
+                            <ul class="nav nav-pills nav-fill" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="signin-tab" data-toggle="tab" href="#signin" role="tab" aria-controls="signin" aria-selected="true">Sign In</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="register-tab" data-toggle="tab" href="#register" role="tab" aria-controls="register" aria-selected="false">Register</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="tab-content-5">
+                                <div class="tab-pane fade show active" id="signin" role="tabpanel" aria-labelledby="signin-tab">
+                                    <form action="#">
+                                        <div class="form-group">
+                                            <label for="singin-email">Username or email address *</label>
+                                            <input type="text" class="form-control" id="singin-email" name="singin-email" required>
+                                        </div>
+                                        <!-- End .form-group -->
+
+                                        <div class="form-group">
+                                            <label for="singin-password">Password *</label>
+                                            <input type="password" class="form-control" id="singin-password" name="singin-password" required>
+                                        </div>
+                                        <!-- End .form-group -->
+
+                                        <div class="form-footer">
+                                            <button type="submit" class="btn btn-outline-primary-2">
+                                                <span>LOG IN</span>
+                                                <i class="icon-long-arrow-right"></i>
+                                            </button>
+
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="signin-remember">
+                                                <label class="custom-control-label" for="signin-remember">Remember Me</label>
+                                            </div>
+                                            <!-- End .custom-checkbox -->
+
+                                            <a href="#" class="forgot-link">Forgot Your Password?</a>
+                                        </div>
+                                        <!-- End .form-footer -->
+                                    </form>
+                                    <div class="form-choice">
+                                        <p class="text-center">or sign in with</p>
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <a href="#" class="btn btn-login btn-g">
+                                                    <i class="icon-google"></i>
+                                                    Login With Google
+                                                </a>
+                                            </div>
+                                            <!-- End .col-6 -->
+                                            <div class="col-sm-6">
+                                                <a href="#" class="btn btn-login btn-f">
+                                                    <i class="icon-facebook-f"></i>
+                                                    Login With Facebook
+                                                </a>
+                                            </div>
+                                            <!-- End .col-6 -->
+                                        </div>
+                                        <!-- End .row -->
+                                    </div>
+                                    <!-- End .form-choice -->
+                                </div>
+                                <!-- .End .tab-pane -->
+                                <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
+                                    <form action="#">
+                                        <div class="form-group">
+                                            <label for="register-email">Your email address *</label>
+                                            <input type="email" class="form-control" id="register-email" name="register-email" required>
+                                        </div>
+                                        <!-- End .form-group -->
+
+                                        <div class="form-group">
+                                            <label for="register-password">Password *</label>
+                                            <input type="password" class="form-control" id="register-password" name="register-password" required>
+                                        </div>
+                                        <!-- End .form-group -->
+
+                                        <div class="form-footer">
+                                            <button type="submit" class="btn btn-outline-primary-2">
+                                                <span>SIGN UP</span>
+                                                <i class="icon-long-arrow-right"></i>
+                                            </button>
+
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="register-policy" required>
+                                                <label class="custom-control-label" for="register-policy">I agree to the <a href="#">privacy policy</a> *</label>
+                                            </div>
+                                            <!-- End .custom-checkbox -->
+                                        </div>
+                                        <!-- End .form-footer -->
+                                    </form>
+                                    <div class="form-choice">
+                                        <p class="text-center">or sign in with</p>
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <a href="#" class="btn btn-login btn-g">
+                                                    <i class="icon-google"></i>
+                                                    Login With Google
+                                                </a>
+                                            </div>
+                                            <!-- End .col-6 -->
+                                            <div class="col-sm-6">
+                                                <a href="#" class="btn btn-login  btn-f">
+                                                    <i class="icon-facebook-f"></i>
+                                                    Login With Facebook
+                                                </a>
+                                            </div>
+                                            <!-- End .col-6 -->
+                                        </div>
+                                        <!-- End .row -->
+                                    </div>
+                                    <!-- End .form-choice -->
+                                </div>
+                                <!-- .End .tab-pane -->
+                            </div>
+                            <!-- End .tab-content -->
+                        </div>
+                        <!-- End .form-tab -->
+                    </div>
+                    <!-- End .form-box -->
+                </div>
+                <!-- End .modal-body -->
+            </div>
+            <!-- End .modal-content -->
+        </div>
+        <!-- End .modal-dialog -->
+    </div>
+    <!-- End .modal -->
+
+    <!-- Plugins JS File -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/jquery.hoverIntent.min.js"></script>
+    <script src="assets/js/jquery.waypoints.min.js"></script>
+    <script src="assets/js/superfish.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>

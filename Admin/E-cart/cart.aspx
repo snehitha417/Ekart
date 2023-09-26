@@ -1,7 +1,6 @@
 ﻿<%@ Page Language="C#" EnableEventValidation="false"  AutoEventWireup="true" CodeBehind="cart.aspx.cs" Inherits="Admin.E_cart.cart" %>
 
 <!DOCTYPE html>
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 
@@ -10,19 +9,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>GVR-E-CART</title>
-      <link href="../banner/logo.jpeg" type="../banner/logo.jpeg" rel="icon"/>
-
+    <title>GVR - eCommerce</title>
     <meta name="keywords" content="HTML5 Template" />
     <meta name="description" content="GVR - eCommerce" />
     <meta name="author" content="p-themes" />
     <!-- Favicon -->
-    <%--<link rel="apple-touch-icon" sizes="180x180" href="assets/images/icons/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/icons/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icons/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/icons/favicon-16x16.png" />
     <link rel="manifest" href="assets/images/icons/site.html" />
     <link rel="mask-icon" href="assets/images/icons/safari-pinned-tab.svg" color="#666666" />
-    <link rel="shortcut icon" href="assets/images/logo.png" />--%>
+    <link rel="shortcut icon" href="assets/images/logo.png" />
     <meta name="apple-mobile-web-app-title" content="Molla" />
     <meta name="application-name" content="Molla" />
     <meta name="msapplication-TileColor" content="#cc9966" />
@@ -34,16 +31,74 @@
     <link rel="stylesheet" href="assets/css/style.css" />
 
     <style>
-        .product{
-            width:15%;
+        .Gridview-header {
+            background-color: skyblue;
+            color: white;
+            margin-left: 5px;
         }
-        img{
-            width:50%;
+
+        .product {
+            width: 25%;
+        }
+
+        img {
+            width: 40%;
+        }
+
+
+        .wrapper {
+            height: 50px;
+            min-width: 100px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+        }
+
+            .wrapper span {
+                width: 35%;
+                text-align: center;
+                font-size: 20px;
+                font-weight: 100;
+                cursor: pointer;
+            }
+
+                .wrapper span.num {
+                    font-size: 16px;
+                    border-right: 2px solid rgba(0,0,0,0.2);
+                    border-left: 2px solid rgba(0,0,0,0.2);
+                    pointer-events: none;
+                }
+
+
+        .modal-backdrop {
+            opacity: 0; /* Hide the backdrop by making it completely transparent */
+            display: none; /* Hide the backdrop by default */
+        }
+
+        modal-content {
+            height: 300px;
+            flex-direction: initial;
+            width: 84%;
+            border-radius: 0.5rem;
+            text-align: center;
+            margin-top: 270px;
+            background-color: bisque;
+        }
+
+        .modal-body {
+            font-size: 20px;
+            text-align: center;
+            color: red;
         }
     </style>
+
+
 </head>
 
-   
+
 <body>
 
     <form runat="server">
@@ -83,9 +138,9 @@
             </div>
 
         </div>
-   
 
-            <!======================= NAV BAR  STARTS HERE -===================>
+
+        <!======================= NAV BAR  STARTS HERE -===================>
 
         <main class="main">
             <div class="page-header text-center" style="background-image: url('assets/images/page-header-bg.jpg')">
@@ -100,43 +155,44 @@
             <!===========================>
 
               <div class="page-content">
-            	<div class="cart">
-	                <div class="container">
-	                	<div class="row">
-	                		<div class ="col-lg-9">
-	                			<table class="table table-cart table-mobile">
-                     
-									<thead>
-										<tr>
-											<th>Image</th>                                              
-											<th>Productname</th>
-                                              <th> </th>
-											<th> price </th>
-											<th> </th>
-										</tr>
-									</thead>
-									<tbody>
-										
-								<%-- <td class="product-col">	<div class="product">	<figure class="product-media">--%>
-                                            
-                                                   <asp:Panel id="cartimage" runat="server"></asp:Panel>
+                  <div class="cart">
+                      <div class="container">
+                          <div class="row">
+                              <div class="col-lg-8">
+                                  <table class="table table-cart table-mobile">
+                                      <thead>
+                                          <tr>
+                                              <th>Image</th>
+                                              <th></th>
+                                              <th>Productname</th>
+                                              <th></th>
+                                              <th>price</th>
+                                              
+                                              <th>Quantity</th>
+                                             
+                                              <th>Remove</th>
+                                          </tr>
+                                      </thead>
 
-													<h3 class="product-title"> </h3>											
-                                                	
-										        	<td class="price-col"> 
+                                      <tbody>
 
-                                                <%-- <asp:Panel ID="price" runat="server"></asp:Panel>--%>
+                                          
 
-											</td>
+                                          <asp:Panel ID="cartimage" runat="server">
+                                          </asp:Panel>
 
-									</tbody>
-                                       
-								</table>
-                              	</div>
+                                      </tbody>
+                                      
+                                    
 
-                            <!=========================== product  price summary ================================>
-                                
-                            <aside class="col-lg-3">
+                                  </table>
+                              </div>
+
+                              <!----------------------------->
+
+                              <!=========================== product  price summary ================================>
+
+                            <aside class="col-lg-4">
                                 <div class="summary summary-cart">
                                     <h3 class="summary-title">Cart Total</h3>
                                     <!-- End .summary-title -->
@@ -145,14 +201,62 @@
                                         <tbody>
 
                                             <tr class="summary-subtotal">
-                                                <td>total:</td>
+                                                <td>Subtotal:</td>
                                                 <td>
                                                     <asp:Panel runat="server" ID="panel_price">
                                                         <asp:Label ID="Total" runat="server"></asp:Label>
                                                     </asp:Panel>
                                                 </td>
                                             </tr>
-                                           
+                                            <!-- End .summary-subtotal -->
+                                            <%--     <tr class="summary-shipping">
+                                                <td>Shipping:</td>
+                                                <td>&nbsp;</td>
+                                            </tr>
+
+                                            <tr class="summary-shipping-row">
+                                                <td>
+                                                    <div class="custom-control custom-radio">
+                                                        <input type="radio" id="free-shipping" name="shipping" class="custom-control-input" />
+                                                        <label class="custom-control-label" for="free-shipping">GST</label>
+                                                    </div>
+                                                    <!-- End .custom-control -->
+                                                </td>
+                                                <td>15%</td>
+                                            </tr>
+                                            <!-- End .summary-shipping-row -->
+
+                                            <tr class="summary-shipping-row">
+                                                <td>
+                                                    <div class="custom-control custom-radio">
+                                                        <input type="radio" id="standart-shipping" name="shipping" class="custom-control-input" />
+                                                        <label class="custom-control-label" for="standart-shipping">Service Tax</label>
+                                                    </div>
+                                                    <!-- End .custom-control -->
+                                                </td>
+                                                <td>20%</td>
+                                            </tr>
+                                            <!-- End .summary-shipping-row -->
+
+                                            <tr class="summary-shipping-row">
+                                                <td>
+                                                    <div class="custom-control custom-radio">
+                                                        <input type="radio" id="express-shipping" name="shipping" class="custom-control-input" />
+                                                        <label class="custom-control-label" for="express-shipping">Delivery Charges</label>
+                                                    </div>
+                                                    <!-- End .custom-control -->
+                                                </td>
+                                                <td></td>
+                                            </tr>
+                                            <!-- End .summary-shipping-row -->
+
+                                            <tr class="summary-shipping-estimate">
+                                                <td>Estimate for Your Country<br />
+                                                    <a href="dashboard.html">Change address</a></td>
+                                                <td>&nbsp;</td>
+                                            </tr>--%>
+                                            <!-- End .summary-shipping-estimate -->
+
                                             <tr class="summary-total">
                                                 <td>Total:</td>
                                                 <td></td>
@@ -160,24 +264,27 @@
                                             <!-- End .summary-total -->
                                         </tbody>
                                     </table>
-                                
+                                    <!-- End .table table-summary -->
 
-                                   <%-- <a href="checkout.aspx" class="btn btn-outline-primary-2 btn-order btn-block">PROCEED TO CHECKOUT</a>--%>
-                                    <asp:Button ID="Checkout_id" runat="server" class="btn btn-outline-primary-2 btn-order btn-block"  OnClick="Checkout_id_Click"  Text="PROCEED TO CHECKOUT"/>
+                                    <%-- <a href="checkout.aspx" class="btn btn-outline-primary-2 btn-order btn-block">PROCEED TO CHECKOUT</a>--%>
+                                    <asp:Button ID="Checkout_id" runat="server" class="btn btn-outline-primary-2 btn-order btn-block" OnClick="Checkout_id_Click" Text="PROCEED TO CHECKOUT" />
                                 </div>
                                 <!-- End .summary -->
 
-                                <a href="category.aspx" class="btn btn-outline-dark-2 btn-block mb-3"><span>CONTINUE SHOPPING</span><i class="icon-refresh"></i></a>
+                                <a href="index1.aspx" class="btn btn-outline-dark-2 btn-block mb-3"><span>CONTINUE SHOPPING</span> <i class="icon-refresh"></i></a>
                             </aside>
 
-                            <!-- End .col-lg-3 -->
-                        </div>
-                    </div>
-                    </div>
+                              <!-- End .col-lg-3 -->
+                          </div>
+                          <!-- End .row -->
+                      </div>
+                      <!-- End .container -->
                   </div>
-            
+                  <!-- End .cart -->
+              </div>
+            <!-- End .page-content -->
         </main><!-- End .main -->
-       
+
 
         <footer class="footer">
             <div class="footer-middle">
@@ -276,8 +383,8 @@
             <!-- End .footer-bottom -->
         </footer>
         <!-- End .footer -->
-       
-    <!-- End .page-wrapper -->
+
+        <!-- End .page-wrapper -->
         <button id="scroll-top" title="Back to Top"><i class="icon-arrow-up"></i></button>
 
         <!-- Mobile Menu -->
@@ -486,7 +593,7 @@
                                             <!-- End .form-group -->
 
                                             <div class="form-group">
-                                                <label for="singin-password">Password *</label>
+                                                <label for="singin-password">Password<span style="color: red">*</span> </label>
                                                 <input type="password" class="form-control" id="singin-password" name="singin-password" />
                                             </div>
                                             <!-- End .form-group -->
@@ -596,6 +703,35 @@
         </div>
         <!-- End .modal -->
 
+
+        <div class="modal fade show" id="myModal1" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content" style="margin-top: 270px; background-color: ghostwhite;">
+                    <div class="modal-header">
+
+                        <h4 class="modal-title" id="myModalLabel1" style="text-align: center;">Removed to Cart</h4>
+                        &nbsp;&nbsp;
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                    </div>
+                    <br />
+                    <div class="modal-body">
+                        Item has been Removed to the Cart successfully.
+                    </div>
+                    <br />
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-sm btn-shadow btn-primary" style="width:15px" data-dismiss="modal">Ok</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function showModal() {
+                $('#myModal1').modal('show');
+            }
+        </script>
+
         <!-- Plugins JS File -->
         <script src="assets/js/jquery.min.js"></script>
         <script src="assets/js/bootstrap.bundle.min.js"></script>
@@ -609,7 +745,7 @@
     </form>
 
 
-            <%--  <div class="col-lg-9">
+    <%--  <div class="col-lg-9">
                            
 
                                 <asp:GridView ID="cart_grid" runat="server" AutoGenerateColumns="false" Width="95%" >
