@@ -167,7 +167,7 @@ namespace Admin.E_cart
 
 
 
-            string script = "<script> alert('Item is added to the cart');</script>";
+            string script = "<script>$('#myModal').modal('show');</script>";
             ClientScript.RegisterStartupScript(this.GetType(), "popupscript", script);
 
             BindData();
@@ -228,6 +228,20 @@ namespace Admin.E_cart
             {
                 rp_bajaj_brand.Visible = false;
             }
+        }
+
+        protected void WishList_Click(object sender, EventArgs e)
+        {
+            string APID = ((LinkButton)sender).CommandArgument;
+
+
+            emsdal emsdal = new emsdal();
+            DataSet ds = new DataSet();
+            ds = emsdal.ins_tbl_wishlist1(APID, "", "");
+
+            string script = "<script>$('#myModal1').modal('show');</script>";
+            ClientScript.RegisterStartupScript(this.GetType(), "popupscript", script);
+            BindData();
         }
 
     }
