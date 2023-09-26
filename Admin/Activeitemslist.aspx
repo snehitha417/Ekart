@@ -10,7 +10,7 @@
 
   <div class="mainbody">
         <div class="container mt-2"> 
-             <div class="ai" ><h3>Active Item Groups</h3></div>
+             <div class="ai" ><h3>Active Item Groups</h3> </div>
           <a href="Items.aspx" <button class="btn bg-success float-lg-right text-white">
                <i class="fa-solid fa-arrow-left" style="color: #ffffff;"></i> <b >Back</b> </button> </a>
             <br />
