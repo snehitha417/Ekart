@@ -21,7 +21,7 @@
     <link rel="shortcut icon" href="assets/images/logo.png" />--%>
 
 
-    <meta name="apple-mobile-web-app-title" content="Molla" />
+    <meta name="apple-mobile-web-app-title" content="Molla"  /> 
     <meta name="application-name" content="Molla" />
     <meta name="msapplication-TileColor" content="#cc9966" />
     <meta name="msapplication-config" content="assets/images/icons/browserconfig.xml" />
@@ -105,12 +105,10 @@
             /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);*/
         }
 
-
             .card-container:hover {
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
                 transition: box-shadow 0.5s ease;
             }
-
 
             .card-container ~ card-container {
                 margin-left: 410px;
