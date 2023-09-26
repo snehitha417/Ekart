@@ -55,7 +55,7 @@
       <td>@twitter</td>
         <td>@mdo</td>
       <td>Active</td>
-        <td><button>Add </button>&nbsp<button>edit </button> </td>
+        <td><button>Add </button>&nbsp<button> edit </button> </td>
     </tr>
     <!-------------------->
      <tr>
