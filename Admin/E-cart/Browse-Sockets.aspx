@@ -52,6 +52,25 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/js/demos/demo-2.js"></script>
    
+    
+    <style>
+         .modal-content {
+            height: 300px;
+            flex-direction: initial;
+            width: 84%;
+            border-radius: 0.5rem;
+            text-align: center;
+            margin-top: 270px;
+        }
+
+          .modal-body {
+            font-size: 20px;
+            text-align: center;
+        }
+
+    </style>
+
+
 </head>
 <body>
     <form runat ="server">
@@ -445,6 +464,53 @@
            
   
             <!======================== BACK ARROW   STARTS HERE  ======================== >  
+
+        <div class="modal fade show" id="myModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content" style="margin-top: 270px; background-color: ghostwhite;">
+                    <div class="modal-header">
+
+                        <h4 class="modal-title" id="myModalLabel" style="text-align: center;">Added to Cart</h4>
+                        &nbsp;&nbsp;
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                    </div>
+                    <br />
+                    <div class="modal-body" style=" text-align: center;
+    font-size: large;">
+                        Item has been added to the cart successfully.
+                    </div>
+                    <br />
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary btn-sm btn-shadow" data-dismiss="modal">Ok</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade show" id="myModal1" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content" style="margin-top: 270px; background-color: ghostwhite;">
+                    <div class="modal-header">
+
+                        <h4 class="modal-title" id="myModalLabel1" style="text-align: center;">Added to Wishlist</h4>
+                        &nbsp;&nbsp;
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                    </div>
+                    <br />
+                    <div class="modal-body" style=" text-align: center;
+    font-size: large;">
+                        Item has been added to the wishlist successfully.
+                    </div>
+                    <br />
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary btn-sm btn-shadow" data-dismiss="modal">Ok</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
    </form>
    

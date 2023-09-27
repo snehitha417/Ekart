@@ -169,9 +169,16 @@
                     </div>
 
 
+                    <div class="user mt-4">
+                        <i class="fa-solid fa-user fa-2x" style="color: #111dbd; margin-left:70px;" ></i><br />
+                        <span class="adminlbl">snehitha123@gmail.com</span>
+                 <%-- <asp:label runat="server" ID= "adminId_label" Text=""> </asp:label> --%>
+                    </div>
+
                         <div class="user mt-4">
                             <i class="fa-solid fa-user fa-2x" style="color: #111dbd; margin-left: 70px;"></i>
                             <br />
+
 
                             <asp:PlaceHolder ID="adminId_label" runat="server">
                                 <%=HttpContext.Current.Session["EmailId"] %>, </asp:PlaceHolder>
@@ -184,6 +191,11 @@
         </nav>
 
     </form>
+
+
+    <%--     <div class="position-relative ">
+             <img class="rounded-circle" src="../seller%20login/images/user.png""  alt="" style="width: 40px; height: 40px;" />--%>
+
 
 
 </body>

@@ -558,6 +558,11 @@
             </div>
         </div>
 
+        <script>
+            function showModal() {
+                $('#myModal1').modal('show');
+            }
+        </script>
 
 
 
