@@ -10,88 +10,88 @@
 namespace Admin.AdminScreens {
     
     
-    public partial class Banners {
+    public partial class AddNewEvent {
         
         /// <summary>
-        /// Bname control.
+        /// Ename control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Bname;
+        protected global::System.Web.UI.WebControls.Label Ename;
         
         /// <summary>
-        /// txt_BannerName control.
+        /// txt_EventName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_BannerName;
+        protected global::System.Web.UI.WebControls.TextBox txt_EventName;
         
         /// <summary>
-        /// rfvfname control.
+        /// eventname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvfname;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator eventname;
         
         /// <summary>
-        /// uploaddate control.
+        /// estartdate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label uploaddate;
+        protected global::System.Web.UI.WebControls.Label estartdate;
         
         /// <summary>
-        /// txt_UploadDate control.
+        /// txt_StartDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_UploadDate;
+        protected global::System.Web.UI.WebControls.TextBox txt_StartDate;
         
         /// <summary>
-        /// rfvlast control.
+        /// startdate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvlast;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator startdate;
         
         /// <summary>
-        /// cont control.
+        /// enddate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label cont;
+        protected global::System.Web.UI.WebControls.Label enddate;
         
         /// <summary>
-        /// txt_Content control.
+        /// txt_EndDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_Content;
+        protected global::System.Web.UI.WebControls.TextBox txt_EndDate;
         
         /// <summary>
-        /// rfvEmailid control.
+        /// edate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvEmailid;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator edate;
         
         /// <summary>
         /// fileImage control.
@@ -139,12 +139,12 @@ namespace Admin.AdminScreens {
         protected global::System.Web.UI.WebControls.Button upl;
         
         /// <summary>
-        /// submitt control.
+        /// submit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button submitt;
+        protected global::System.Web.UI.WebControls.Button submit;
     }
 }
