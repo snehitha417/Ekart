@@ -65,5 +65,14 @@ namespace Admin.AdminScreens {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label subscribe_label;
+        
+        /// <summary>
+        /// adminId_label control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder adminId_label;
     }
 }

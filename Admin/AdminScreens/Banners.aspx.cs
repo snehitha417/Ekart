@@ -14,25 +14,15 @@ namespace Admin.AdminScreens
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
-        }
-
-        protected void upl_Click(object sender, EventArgs e)
-        {
-            if (FileuploadImage.HasFile)
+            if (!IsPostBack)
             {
-                hdnuploadfilename.Value = FileuploadImage.FileName;
-                string fileName = FileuploadImage.FileName;
-                string filePath = Server.MapPath("~/banner/") + fileName;
-                FileuploadImage.SaveAs(filePath);
 
-                Session["filePath"] = filePath;
-                //  Perform any additional processing with the uploaded file
             }
-
         }
 
-        protected void bannsubmt_Click(object sender, EventArgs e)
+
+        //submitt_Click_bann
+        protected void submitt_Click_bann(object sender, EventArgs e)
         {
             Banner objp = new Banner();
 
@@ -47,7 +37,7 @@ namespace Admin.AdminScreens
 
             try
             {
-                if (result > 0) 
+                if (result > 0)
                 {
                     Response.Clear();
                 }
@@ -65,6 +55,21 @@ namespace Admin.AdminScreens
             }
         }
 
-        
+
+        //upl_Click
+        protected void upl_Click(object sender, EventArgs e)
+        {
+            if (FileuploadImage.HasFile)
+            {
+                hdnuploadfilename.Value = FileuploadImage.FileName;
+                string fileName = FileuploadImage.FileName;
+                string filePath = Server.MapPath("~/banner/") + fileName;
+                FileuploadImage.SaveAs(filePath);
+
+                Session["filePath"] = filePath;
+                //  Perform any additional processing with the uploaded file
+            }
+        }
+
     }
 }

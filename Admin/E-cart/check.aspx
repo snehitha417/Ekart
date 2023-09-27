@@ -200,7 +200,7 @@
                                                 <asp:Button ID="cnfrm_checkout" runat="server" Class="btn" Text="Continue to CheckOut"
                                                     Style="background-color: #062b60; color: white;" OnClick="cnfrm_checkout_Click" Visible="false" />
                                         </div>
-
+                                        &nbsp;
                                     </div>
                                 </div>
 
@@ -216,7 +216,7 @@
                                         </div>
 
                                         <div class="row">
-                                            <div class="col-lg-6">
+                                            <div class="col-lg-8">
                                                 <p class="p-4">
 
                                                     <asp:PlaceHolder ID="PlaceHolder1" runat="server">
@@ -241,16 +241,24 @@
 
                                             </div>
                                                
-                                               <div class="col-lg-3">
-                                                    <asp:Button ID="Edit" runat="server" Class="btn btn-warning" Text="Edit"
+                                              <%-- <div class="col-lg-2">
+                                                
+                                                      <%--<asp:Button ID="Edit" runat="server" Class="btn btn-warning" Text="Edit"
                                                         Style="margin-left: 6rem; margin-top: 10px; color: white; border: none;" />
-                                                </div>
 
-                                                  <div class="col-lg-3">
-                                                      <asp:Button ID="AddNewAddress" runat="server" Class="btn btn-success" Text="Add New Address"
-                                                            Style="margin: 15px;"/>
-                                                   </div>
-                                              </div>
+                                                </div>--%>
+
+                                                  <div class="col-lg-4">
+                                                           <i class="fa-solid fa-square-pen fa-2x" style="color: #0d33c9;"></i>
+                                                    </div>
+                                               
+                                              
+                                                  </div>
+                                         <div class="col-lg-2">
+                                                       <asp:Button ID="AddNewAddress" runat="server" Class="btn btn-success" Text="Add New Address"
+                                                            Style=" margin-left: -75px;   margin-top: 10px"/> 
+                                                        </div>
+                                               </div>
                                             </div>
                                         </div>
 
