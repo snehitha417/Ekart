@@ -4,8 +4,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 
-    <!-- molla/cart.html  22 Nov 2019 09:55:06 GMT -->
-
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -31,6 +29,7 @@
     <link rel="stylesheet" href="assets/css/style.css" />
 
     <style>
+
         .Gridview-header {
             background-color: skyblue;
             color: white;
@@ -98,7 +97,6 @@
 
 </head>
 
-
 <body>
 
     <form runat="server">
@@ -114,7 +112,6 @@
 
                     <li><a href="category.aspx" class="sf-with-ul">Product</a> </li>
 
-
                     <li>
                         <a href="#" class="sf-with-ul">Pages</a>
 
@@ -129,9 +126,7 @@
                         </ul>
                     </li>
 
-
                     <li><a href="contact.aspx" class="sf-with-ul">Contact</a>  </li>
-
 
                 </ul>
 
@@ -139,12 +134,11 @@
 
         </div>
 
-
         <!======================= NAV BAR  STARTS HERE -===================>
 
         <main class="main">
             <div class="page-header text-center" style="background-image: url('assets/images/page-header-bg.jpg')">
-                <div class="container">
+                <div class="container"> 
                     <h1 class="page-title">Shopping Cart<span>Shop</span></h1>
                 </div>
                 <!-- End .container -->
