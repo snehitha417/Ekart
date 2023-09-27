@@ -8,19 +8,19 @@
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
- <title>GVR-E-CART</title>
-      <link href="../banner/logo.jpeg" type="../banner/logo.jpeg" rel="icon"/>
+    <title>GVR-E-CART</title>
+    <link href="../banner/logo.jpeg" type="../banner/logo.jpeg" rel="icon"/>
 
     <meta name="keywords" content="HTML5 Template"/>
     <meta name="description" content="GVR - eCommerce"/>
     <meta name="author" content="p-themes"/>
     <!-- Favicon -->
-    <%--<link rel="apple-touch-icon" sizes="180x180" href="assets/images/icons/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/icons/apple-touch-icon.png"/>
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icons/favicon-32x32.png"/>
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/icons/favicon-16x16.png"/>
     <link rel="manifest" href="assets/images/icons/site.html"/>
     <link rel="mask-icon" href="assets/images/icons/safari-pinned-tab.svg" Color="#666666"/>
-    <link rel="shortcut icon" href="assets/images/logo.png"/>--%>
+    <link rel="shortcut icon" href="assets/images/logo.png"/>
 
     <meta name="apple-mobile-web-app-title" content="Molla"/>
     <meta name="application-name" content="Molla"/>
@@ -558,6 +558,11 @@
             </div>
         </div>
 
+        <script>
+            function showModal() {
+                $('#myModal1').modal('show');
+            }
+        </script>
 
 
 

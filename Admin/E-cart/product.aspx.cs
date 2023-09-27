@@ -69,13 +69,6 @@ namespace Admin.E_cart
                 Panel_productname.Controls.Add(new LiteralControl("</p>"));
 
 
-                //Panel_productname.Controls.Add(new LiteralControl("<h6> Discount:-"));
-                //Label lblnm3 = new Label();
-                //lblnm3.Text = ds.Tables[0].Rows[i]["Discount"].ToString();
-                //Panel_productname.Controls.Add(lblnm3);
-                //Panel_productname.Controls.Add(new LiteralControl("</h6> "));
-
-
                 Panel_productname.Controls.Add(new LiteralControl("<h6>Brand:-"));
                 Label lblnm4 = new Label();
                 lblnm4.Text = ds.Tables[0].Rows[i]["Brand"].ToString();
@@ -96,10 +89,6 @@ namespace Admin.E_cart
                 Panel_productname.Controls.Add(lblnm);
                 Panel_productname.Controls.Add(new LiteralControl("</h6>"));
 
-                //decimal a = Convert.ToDecimal(lblnm.Text);
-                //int b = Convert.ToInt32(qnty.Text);
-                //lblnm.Text = (a * b).ToString();
-
                 Button linkmemberview1 = new Button()
                 {
                     Text = "Buy Now"
@@ -109,7 +98,6 @@ namespace Admin.E_cart
                 linkmemberview1.Attributes.Add("Style", "background-color:  #f6a21c; color: white; width: 16rem; height: 37px; margin - left: 45px; border: none; border - radius: 6px; height: 4.5rem; font-size:16px; ");
                 linkmemberview1.CommandName = "btn_view";
                 linkmemberview1.CommandArgument = ds.Tables[0].Rows[i]["APID"].ToString();
-                //linkmemberview1.PostBackUrl="Payment.aspx?ID="
                 linkmemberview1.Click += new EventHandler(this.btn_buy_Click);
                 linkmemberview1.CausesValidation = false;
                 Panel_productname.Controls.Add(linkmemberview1);
@@ -129,33 +117,33 @@ namespace Admin.E_cart
                 linkmemberview.CausesValidation = false;
                 Panel_productname.Controls.Add(linkmemberview);
 
-
             }
+
             Session["qnt"] = qnty.Text;
-
-
         }
+
+        //btn_cancel_Click
+
         protected void btn_cancel_Click(object sender, EventArgs e)
         {
             Response.Redirect("index1.aspx");
 
         }
 
+        //btn_buy_Click
         protected void btn_buy_Click(object sender, EventArgs e)
         {
-
-            // Get the APID from the CommandArgument
             Button btn = (Button)sender;
             string apid = btn.CommandArgument;
             Session["Id"] = apid;
-            // Redirect to the next page with the APID in the query string
-            Response.Redirect("checkout.aspx?APID=" + apid);
+            Response.Redirect("check.aspx?APID=" + apid);
         }
 
+
+        //btnPlus_Click
         protected void btnPlus_Click(object sender, EventArgs e)
         {
             int i = 0;
-            //DataTable dataTable = new DataTable();
             emsdal da = new emsdal();
             DataSet ds = new DataSet();
             ds = da.ProductDetails(APID);
@@ -168,19 +156,19 @@ namespace Admin.E_cart
                 {
                     quantity++;
                     qnty.Text = quantity.ToString("D2");
-
                 }
+
                 decimal price = Convert.ToDecimal(ds.Tables[0].Rows[i]["ProductPrice"].ToString());
                 int qnty1 = Convert.ToInt32(qnty.Text);
 
                 lblnm.Text = (price * qnty1).ToString();
-
             }
         }
+
+        //btnMinus_Click
         protected void btnMinus_Click(object sender, EventArgs e)
         {
             int i = 0;
-            //DataTable dataTable = new DataTable();
             emsdal da = new emsdal();
             DataSet ds = new DataSet();
             ds = da.ProductDetails(APID);

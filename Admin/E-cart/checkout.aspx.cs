@@ -28,14 +28,12 @@ namespace Admin.E_cart
             }
             else
             {
-                
                 BindData1();
             }
 
         }
         string connectionString1 = ConfigurationManager.ConnectionStrings["ConnectionString"].ToString();
 
-        
         private void BindData()
         {
             using (SqlConnection conn = new SqlConnection(connectionString1))

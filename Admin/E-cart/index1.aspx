@@ -13,12 +13,12 @@
     <!-- Favicon -->
     <link href="../banner/logo.jpeg" type="../banner/logo.jpeg" rel="icon" />
 
-    <%--<link rel="apple-touch-icon" sizes="180x180" href="assets/images/demos/demo-2/logo.png"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/demos/demo-2/logo.png"/>
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icons/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/icons/favicon-16x16.png" />
     <link rel="manifest" href="assets/images/icons/site.html" />
     <link rel="mask-icon" href="assets/images/icons/safari-pinned-tab.svg" color="#666666" />
-    <link rel="shortcut icon" href="assets/images/logo.png" />--%>
+    <link rel="shortcut icon" href="assets/images/logo.png" />
 
 
     <meta name="apple-mobile-web-app-title" content="Molla"  /> 
@@ -326,37 +326,24 @@
                 <div class="header-top">
                     <div class="container">
                         <div class="header-left">
-                            <%--   <p>Special collection already available.</p>--%>
+                           
                         </div>
 
                         <div class="header-right">
                             <ul class="top-menu">
 
-                                <%--   <li>
-                                    <a href="DemoPage.aspx">&nbsp;Read more ...</a>
-                                    <ul class="float-right">--%>
-
-                                <%--<li><a href="RegistrationForm.aspx">Signup/SignIn</a></li>--%>
-                                <%-- <asp:LinkButton ID="signup" runat="server" Text="SignUp/SignIn" OnClick="signlogin" Visible="true"> </asp:LinkButton>
-                                        <asp:Button ID="login_btn"    runat="server" class="nav-item  text-white btn btn-success ml-lg-5 p-2" Text="Login"  OnClick="homepage_login_btn"  style="width: 125px; border-radius:0.4rem;" NavigateUrl="userlogin.aspx"/>
-                                        <asp:Button ID ="logout_btn"   runat="server" class="nav-item  text-white btn btn-info  ml-lg-5 p-2" Text="Logout" Visible="false" OnClientClick="return confirm ('Are you sure you want to logout')" OnClick="logout_btn_Click"  style="width: 125px; border-radius:0.4rem;"/>
-                               <li><a href="#signin-modal" data-toggle="modal">Sign in / Sign up</a></li>
-                                    </ul>
-                              </li>--%>
+                               
                             </ul>
                         </div>
                     </div>
                 </div>
 
-
-                <!---------------- 1st header ends -------------------->
-
                 <!-------------2nd  header  -logo-header------------------------>
 
-                <div class="container header-middle">
+                 <div class="container header-middle">
                     <div class="navbar navbar-expand-lg">
                         <a href="index1.aspx" class="navbar-brand">
-                            <img src="assets/images/demos/demo-2/logo.png" alt="Molla Logo" style="width: 110px;" />
+                            <img src="assets/images/demos/demo-2/logo.png" alt="Molla Logo" style="width: 110px; margin-left: -110px" />
                         </a>
 
                         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#snehitha">
@@ -367,32 +354,61 @@
                             <div class="header-search header-search-extended header-search-visible header-search-no-radius d-none d-lg-block">
                                 <a href="#" class="search-toggle" role="button"><i class="icon-search"></i></a>
 
-                                <form>
-                                    <div class="header-search-wrapper search-wrapper-wide">
+                               
+                                    <div class="header-search-wrapper search-wrapper-wide" style="margin-left: 30px; width: 40rem">
                                         <label for="q" class="sr-only">Search</label>
-                                        <input type="search" class="form-control" name="q" id="q" placeholder="Search product ..." style="width: 50rem;" />
+                                        <input type="search" class="form-control" name="q" id="q" placeholder="Search product ..." style="width: 20rem; height: 4rem" />
                                         <button class="btn btn" type="submit"><i class="icon-search"></i></button>
                                     </div>
-                                </form>
+                              
                             </div>
                         </div>
 
 
+                        <div class="container">
+
+                            <div class="header-bottom sticky-header">
+
+                                <div class="navbar navbar-expand-lg">
+
+                                    <div class="header-center" style="margin-left: -9px">
+                                        <nav class="main-nav">
+                                            <ul class="menu sf-arrows">
+                                                <li class="megamenu-container active"><a href="about-2.aspx" class="sf-with-ul">Home</a></li>
+                                                <li><a href="category.aspx">Products</a></li>
+
+                                                <li><a href="#" class="sf-with-ul">Pages</a>
+                                                    <ul>
+                                                        <li><a href="about-2.aspx" class="sf-with-ul">About</a></li>
+                                                        <%--<li><a href="LoginForm.aspx">Login</a></li>--%>
+                                                        <li><a href="blog.aspx">Blog</a></li>
+                                                        <li><a href="coming-soon.html">Coming Soon</a></li>
+                                                    </ul>
+
+                                                </li>
+                                                <li><a href="contact.aspx" class="sf-with-ul">Contact</a></li>
+
+                                            </ul>
+                                        </nav>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
                         <div class="collapse navbar-collapse  " style="margin-left: 150px;">
+
                             <ul class="navbar-nav">
 
                                 <div class="header-right" style="display: flex;">
 
-                                    <%--<asp:Button ID="login_btn" runat="server" class="nav-item  text-white" Text="Login" Style="width: 80px; border-radius: 0.4rem; border: none; background-color: #2b4973; height: 40px;"  OnClick="homepage_login_btn" />--%>
-
-                                    <asp:HyperLink ID="btn_login" runat="server" Class="btnlogin" Text="Login" NavigateUrl="UserLogin.aspx" Style="width: 110px; text-align: center; border-radius: 0.4rem; color: white; border: none; background-color: #2b4973; height: 36px; padding: 5px; margin-top: 13px;"></asp:HyperLink>
+                                    <asp:HyperLink ID="btn_login" runat="server" Class="btnlogin" Text="Login" NavigateUrl="UserLogin.aspx" Style="width: 110px; text-align: center; border-radius: 0.4rem; color: white; border: none; background-color: #2b4973; height: 36px; padding: 5px; margin-top: 13px; margin-left: -160px"></asp:HyperLink>
 
                                     &nbsp &nbsp &nbsp 
-                                    
-                                      
-                  
-                   <asp:HyperLink ID="btn_logout" runat="server" NavigateUrl="UserLogin.aspx"
-                       Style="width: 110px; text-align: center; border-radius: 0.4rem; color: white; border: none; background-color: red; height: 36px; padding: 5px; margin-top: 13px;">Logout</asp:HyperLink>
+                                                                               
+                   <asp:HyperLink ID="btn_logout" runat="server" NavigateUrl="UserLogin.aspx" Style="width: 110px; text-align: center; border-radius: 0.4rem; color: white; border: none; background-color: red; height: 36px; padding: 5px; margin-top: 13px; margin-left: -160px">Logout</asp:HyperLink>
 
                                     <div class="account">
                                         <a href="dashboard.aspx" title="My account">
@@ -408,7 +424,6 @@
                                         </a>
                                     </div>
 
-
                                     <div class="wishlist">
                                         <a href="wishlist.aspx" title="Wishlist">
                                             <div class="icon">
@@ -422,7 +437,6 @@
                                     </div>
 
                                     <div class="carticon">
-
                                         <a href="cart.aspx">
                                             <i class="icon-shopping-cart fa-1x" style="color: #FF9800; font-size: 35px; margin-left: 30px;"></i></a>
 
@@ -431,15 +445,15 @@
                                             <asp:Label ID="cartprod" runat="server"></asp:Label></span>
                                     </div>
                                 </div>
-
                             </ul>
                         </div>
                     </div>
                 </div>
+            </header> 
 
                 <!-------------2nd  header  -logo-header----- ends here------------------------>
 
-                <div class="container">
+                <%--<div class="container">
                     <div class="header-bottom sticky-header">
 
                         <div class="navbar navbar-expand-lg">
@@ -487,17 +501,11 @@
                             </div>
 
 
-                            <%--<div class="header-right">
-                                <i class="la la-lightbulb-o"></i>
-                                <p>Clearance<span class="highlight">&nbsp;Up to 30% Off</span></p>
-                            </div>--%>
                         </div>
                     </div>
                 </div>
 
-            </header>
-
-            <!====================================================================>
+            </header>--%>
   
        
     <!========================  CAROUSEL STARTS HERE ======================== >

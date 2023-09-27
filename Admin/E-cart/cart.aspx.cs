@@ -12,7 +12,7 @@ namespace Admin.E_cart
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+
             if (!IsPostBack)
             {
 
@@ -79,7 +79,6 @@ namespace Admin.E_cart
                             cartimage.Controls.Add(new LiteralControl("</td>"));
 
 
-
                             cartimage.Controls.Add(new LiteralControl("<td>"));
                             cartimage.Controls.Add(new LiteralControl("<div class='wrapper'>"));
 
@@ -107,16 +106,13 @@ namespace Admin.E_cart
                             cartimage.Controls.Add(new LiteralControl("</td>"));
 
 
-                            //cartimage.Controls.Add(new LiteralControl("<td>"));
-
-                            //cartimage.Controls.Add(new LiteralControl("</td>"));
-
                             cartimage.Controls.Add(new LiteralControl("<td>"));
 
                             Button linkmemberview = new Button()
                             {
                                 Text = "Remove"
                             };
+
                             linkmemberview.Attributes.Add("runat", "server");
                             linkmemberview.Attributes.Add("Style", "background-color: #f6a21c; color: white; width: 10rem; height:4rem; font-size: 16px; border-radius: 3.5px; margin-left: 60px; margin - top: 10px;   border: none; ");
                             linkmemberview.CommandName = "btn_view";
@@ -133,18 +129,14 @@ namespace Admin.E_cart
 
                             cartimage.Controls.Add(new LiteralControl("<td>"));
 
-
-
                             cartimage.Controls.Add(new LiteralControl("</td>"));
 
                             cartimage.Controls.Add(new LiteralControl("</tr>"));
 
-
-
                         }
 
-
                     }
+
                     if (ds.Tables[0].Rows.Count > 0)
                     {
                         Double Amount;
@@ -155,13 +147,13 @@ namespace Admin.E_cart
                             string APID = ds.Tables[0].Rows[i]["APID"].ToString();
                             Session["APID"] = APID;
                             Label txtpr = (Label)cartimage.FindControl("txtpr_" + APID);
-                            //  Double qnty = Convert.ToDouble((Session["qnty" + APID].ToString()).ToString());
-                            // Amount =Convert.ToDouble(ds.Tables[0].Rows[i]["ProductPrice"].ToString());
+
                             Amount = Convert.ToDouble(txtpr.Text);
-                            // Amount = (Amount * qnty);
                             TotalAmount = TotalAmount + Amount;
                         }
+
                         Total.Text = TotalAmount.ToString();
+
                     }
 
                 }
@@ -169,6 +161,8 @@ namespace Admin.E_cart
 
         }
 
+
+        //m_btn_click
         protected void m_btn_click(object sender, EventArgs e)
         {
             string APID = ((Button)sender).CommandArgument;
@@ -199,6 +193,8 @@ namespace Admin.E_cart
             }
         }
 
+
+        //btn_remove_Click
         protected void btn_remove_Click(object sender, EventArgs e)
         {
 
@@ -209,10 +205,7 @@ namespace Admin.E_cart
                 using (SqlConnection connection = new SqlConnection(connectionString1))
                 {
                     connection.Open();
-                    //emsdal d1a = new emsdal();
-                    //DataSet ds = new DataSet();
-                    //SqlCommand cmd = new SqlCommand();
-                    //ds = d1a.Delete_Cart(apid);
+
                     using (SqlCommand command = new SqlCommand(deleteCommand, connection))
                     {
                         int rowAffected = command.ExecuteNonQuery();
@@ -241,16 +234,17 @@ namespace Admin.E_cart
                     }
                 }
             }
-
-
         }
+
+
+        //Checkout_id_Click
         protected void Checkout_id_Click(object sender, EventArgs e)
         {
-
             Response.Redirect("checkout.aspx");
-
         }
 
+
+        //btn_linkpr
         protected void btn_linkpr(object sender, EventArgs e)
         {
             string APID = ((LinkButton)sender).CommandArgument;
@@ -259,13 +253,14 @@ namespace Admin.E_cart
             Response.Redirect("product.aspx?APID=" + APID);
         }
 
+
+        //p_btn_click
         protected void p_btn_click(object sender, EventArgs e)
         {
             string APID = ((Button)sender).CommandArgument;
             TextBox lbln = (TextBox)cartimage.FindControl("qnty" + APID);
             Label txtpr = (Label)cartimage.FindControl("txtpr_" + APID);
             int i = 0;
-            //DataTable dataTable = new DataTable();
 
 
             emsdal da = new emsdal();
@@ -279,16 +274,14 @@ namespace Admin.E_cart
                 {
                     if (quantity < 15)
                     {
-
                         quantity++;
                         lbln.Text = quantity.ToString("D2");
                         Session["qnty" + APID] = lbln.Text;
                     }
+
                     decimal price = Convert.ToDecimal(ds.Tables[0].Rows[i]["ProductPrice"].ToString());
                     int qnty1 = Convert.ToInt32(lbln.Text);
-                    //lbln.Text = qnty1.ToString();
                     string a = (price * qnty1).ToString();
-                    //Label txtpr1 = new Label();
                     txtpr.Text = a.ToString();
 
                 }
@@ -298,9 +291,3 @@ namespace Admin.E_cart
 
     }
 }
-
-
-
-
-
-

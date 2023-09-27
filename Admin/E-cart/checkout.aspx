@@ -307,7 +307,7 @@
                 <div class="row">
                     <div class="col-sm-6 col-lg-3">
                         <div class="widget widget-about">
-                            <img src="assets/images/logo.png" class="footer-logo" alt="Footer Logo" width="105" height="25">
+                            <img src="assets/images/logo.png" class="footer-logo" alt="Footer Logo" width="105" height="25" >
                             <p>Praesent dapibus, neque id cursus ucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. </p>
 
                             <div class="social-icons">
@@ -603,13 +603,13 @@
                                     <form action="#">
                                         <div class="form-group">
                                             <label for="singin-email">Username or email address *</label>
-                                            <input type="text" class="form-control" id="singin-email" name="singin-email" required>
+                                            <input type="text" class="form-control" id="singin-email" name="singin-email" required="" />
                                         </div>
                                         <!-- End .form-group -->
 
                                         <div class="form-group">
                                             <label for="singin-password">Password *</label>
-                                            <input type="password" class="form-control" id="singin-password" name="singin-password" required>
+                                            <input type="password" class="form-control" id="singin-password" name="singin-password" required="" />
                                         </div>
                                         <!-- End .form-group -->
 
@@ -620,7 +620,7 @@
                                             </button>
 
                                             <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="signin-remember">
+                                                <input type="checkbox" class="custom-control-input" id="signin-remember" />
                                                 <label class="custom-control-label" for="signin-remember">Remember Me</label>
                                             </div>
                                             <!-- End .custom-checkbox -->
@@ -656,13 +656,13 @@
                                     <form action="#">
                                         <div class="form-group">
                                             <label for="register-email">Your email address *</label>
-                                            <input type="email" class="form-control" id="register-email" name="register-email" required>
+                                            <input type="email" class="form-control" id="register-email" name="register-email" required="" />
                                         </div>
                                         <!-- End .form-group -->
 
                                         <div class="form-group">
                                             <label for="register-password">Password *</label>
-                                            <input type="password" class="form-control" id="register-password" name="register-password" required>
+                                            <input type="password" class="form-control" id="register-password" name="register-password" required="" />
                                         </div>
                                         <!-- End .form-group -->
 

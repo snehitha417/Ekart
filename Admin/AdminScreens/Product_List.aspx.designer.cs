@@ -10,78 +10,87 @@
 namespace Admin.AdminScreens {
     
     
-    public partial class AdminDashboard {
+    public partial class WebForm1 {
         
         /// <summary>
-        /// cat control.
+        /// form1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label cat;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// tcat control.
+        /// List control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label tcat;
+        protected global::System.Web.UI.WebControls.Panel List;
         
         /// <summary>
-        /// Products control.
+        /// SM1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Products;
+        protected global::System.Web.UI.ScriptManager SM1;
         
         /// <summary>
-        /// tproducts control.
+        /// txtSearch control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label tproducts;
+        protected global::System.Web.UI.WebControls.TextBox txtSearch;
         
         /// <summary>
-        /// sale control.
+        /// ADDItem control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label sale;
+        protected global::System.Web.UI.WebControls.Button ADDItem;
         
         /// <summary>
-        /// tsales control.
+        /// gridView control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label tsales;
+        protected global::System.Web.UI.WebControls.Repeater gridView;
         
         /// <summary>
-        /// order control.
+        /// popup control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label order;
+        protected global::System.Web.UI.WebControls.Panel popup;
         
         /// <summary>
-        /// torders control.
+        /// btnyes control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label torders;
+        protected global::System.Web.UI.WebControls.Button btnyes;
+        
+        /// <summary>
+        /// btnno control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnno;
     }
 }
