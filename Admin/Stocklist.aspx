@@ -8,50 +8,54 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
    
      <div class="bodymain">
-     <div class="container">  
+
+     <div class="container"> 
+          
           <style>
-       .my-table {
-  width: 100%;
-  border-collapse: collapse;
-}
 
-.my-table th {
-  background-color: #f2f2f2;
-  font-weight: bold;
-  padding: 8px;
-  max-width:900px;
-  text-align: left;
-  border: 1px solid #ccc;
-}
+              .my-table {
+                  width: 100%;
+                  border-collapse: collapse;
+              }
 
-.my-table td {
-  padding: 8px;
-  border: 1px solid #ccc;
- 
-}
+                  .my-table th {
+                      background-color: #f2f2f2;
+                      font-weight: bold;
+                      padding: 8px;
+                      max-width: 900px;
+                      text-align: left;
+                      border: 1px solid #ccc;
+                  }
 
-               .table{
-                   width:1400px;  
-                   
-                     
-        }
+                  .my-table td {
+                      padding: 8px;
+                      border: 1px solid #ccc;
+                  }
+
+              .table {
+                  width: 1400px;
+              }
+
               .GridView-HeaderText {
-    width: 200px;
-  }
-              .th{
-                  max-width:10px;
+                  width: 200px;
               }
-              .btn-add{
+
+              .th {
+                  max-width: 10px;
+              }
+
+              .btn-add {
                   color: white;
-    height: 2rem;
-    font-weight: bold;
-    background-color: lawngreen;
-    margin-left: 77rem;
-    width: 7rem;
-    border-color: gold;
-    border-radius: 0.5rem;
+                  height: 2rem;
+                  font-weight: bold;
+                  background-color: lawngreen;
+                  margin-left: 77rem;
+                  width: 7rem;
+                  border-color: gold;
+                  border-radius: 0.5rem;
               }
-</style>
+          </style>
+
        <form id="form1" runat="server">
             <asp:Panel runat="server" ID="List" >
            <asp:ScriptManager runat="server" id="SM1"></asp:ScriptManager>
@@ -91,25 +95,23 @@
             </td>
           <td> 
               <asp:Label ID="lalitm"  runat="server" Text='<%# Eval("ItemName") %>'></asp:Label>
-              <%--<asp:TextBox ID="txtupdt" runat="server" Text='<%# Eval("ItemName") %>' Visible="false"></asp:TextBox>--%>
-              
+             
           </td>
           <td>
               <asp:Label ID="lblbrname" runat="server" Text='<%# Eval("BrandName") %>'></asp:Label>
-              <%--<asp:TextBox ID="txtbrname" runat="server" Text='<%# Eval("BrandName") %>' Visible="false"></asp:TextBox>--%>
-          </td>
+              </td>
           <td>
               <asp:Label ID="lblmodel" runat="server" Text='<%# Eval("Model") %>'></asp:Label>
-              <%--<asp:TextBox ID="txtmodel" runat="server" Text='<%# Eval("Model") %>' Visible="false"></asp:TextBox>--%>
+              
               </span></td>
              <td>
                  <asp:Label ID="lblprice" runat="server" Text='<%# Eval("Price") %>' />
-                 <%--<asp:TextBox ID="txtprice" runat="server" Text='<%# Eval("Price") %>' Visible="false"--%>
+    
 
              </td>
             <td>
                  <asp:Label ID="Label1" runat="server" Text='<%# Eval("Quantity") %>' />
-                 <%--<asp:TextBox ID="txtprice" runat="server" Text='<%# Eval("Price") %>' Visible="false"--%>
+
 
              </td>
             <td>

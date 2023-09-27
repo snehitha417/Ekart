@@ -114,6 +114,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AdminScreens\AddNewEvent.aspx" />
     <Content Include="AdminScreens\AddNewProduct.aspx" />
     <Content Include="AdminScreens\AdminDashboard.aspx" />
     <Content Include="AdminScreens\AdminLogin.aspx" />
@@ -121,7 +122,12 @@
     <Content Include="AdminScreens\Banners.aspx" />
     <Content Include="AdminScreens\Customers.aspx" />
     <Content Include="AdminScreens\Images\background1.jpg" />
+    <Content Include="AdminScreens\Images\category.png" />
+    <Content Include="AdminScreens\Images\orders.png" />
+    <Content Include="AdminScreens\Images\products.png" />
+    <Content Include="AdminScreens\Images\sales.png" />
     <Content Include="AdminScreens\stockyentry.aspx" />
+    <Content Include="AdminScreens\SubscriberDetails.aspx" />
     <Content Include="Allitemsgroup.aspx" />
     <Content Include="banner\about1.jpg" />
     <Content Include="banner\about2.jpg" />
@@ -1726,6 +1732,7 @@
     <Content Include="E-cart\category.aspx" />
     <Content Include="E-cart\category.html" />
     <Content Include="E-cart\check.aspx" />
+    <Content Include="E-cart\checkout.aspx" />
     <Content Include="E-cart\checkout.html" />
     <Content Include="E-cart\coming-soon.html" />
     <Content Include="E-cart\contact-2.html" />
@@ -1917,6 +1924,13 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminScreens\AddNewEvent.aspx.cs">
+      <DependentUpon>AddNewEvent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminScreens\AddNewEvent.aspx.designer.cs">
+      <DependentUpon>AddNewEvent.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AdminScreens\AddNewProduct.aspx.cs">
       <DependentUpon>AddNewProduct.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1965,6 +1979,13 @@
     </Compile>
     <Compile Include="AdminScreens\stockyentry.aspx.designer.cs">
       <DependentUpon>stockyentry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminScreens\SubscriberDetails.aspx.cs">
+      <DependentUpon>SubscriberDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminScreens\SubscriberDetails.aspx.designer.cs">
+      <DependentUpon>SubscriberDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="Allitemsgroup.aspx.cs">
       <DependentUpon>Allitemsgroup.aspx</DependentUpon>
@@ -2093,6 +2114,13 @@
     </Compile>
     <Compile Include="E-cart\check.aspx.designer.cs">
       <DependentUpon>check.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="E-cart\checkout.aspx.cs">
+      <DependentUpon>checkout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="E-cart\checkout.aspx.designer.cs">
+      <DependentUpon>checkout.aspx</DependentUpon>
     </Compile>
     <Compile Include="E-cart\contact.aspx.cs">
       <DependentUpon>contact.aspx</DependentUpon>
