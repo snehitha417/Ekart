@@ -16,11 +16,12 @@ namespace Admin.Models
     {
         string str = string.Empty;
 
-       
         public emsdal()
         {
             str = ConfigurationManager.ConnectionStrings["ConnectionString"].ToString();
         }
+
+        //adminreg
         public DataSet adminreg(AdminReg objpi)
         {
             DataSet ds = new DataSet();
@@ -51,6 +52,7 @@ namespace Admin.Models
                 {
                     throw ex;
                 }
+
                 finally
                 {
                     con.Close();
@@ -60,9 +62,8 @@ namespace Admin.Models
         }
 
     
-
-
         //get_AdminLogin
+
         public DataSet get_AdminLogin(signin objpi)
         {
             DataSet ds = new DataSet();
@@ -78,11 +79,13 @@ namespace Admin.Models
                     da.Fill(ds);
                     return ds;
                 }
+
                 catch (Exception ex)
                 {
                     throw ex;
 
                 }
+
                 finally
                 {
                     con.Close();
@@ -90,43 +93,8 @@ namespace Admin.Models
             }
         }
 
-      
 
-        //public DataSet UserRegistration1(UserRegistration objpi)
-        //{
-        //    DataSet ds = new DataSet();
-        //    using (SqlConnection con = new SqlConnection(str))
-        //    {
-        //        try
-        //        {
-        //            SqlCommand cmdsrc = new SqlCommand("pr_UserRegistration", con);
-        //            cmdsrc.CommandType = CommandType.StoredProcedure;
-        //            cmdsrc.Parameters.AddWithValue("@FirstName", objpi.FirstName);
-        //            cmdsrc.Parameters.AddWithValue("@LastName", objpi.LastName);
-        //            cmdsrc.Parameters.AddWithValue("@DOB", objpi.DOB);
-        //            cmdsrc.Parameters.AddWithValue("@Email", objpi.EmailId);
-        //            cmdsrc.Parameters.AddWithValue("@Password_hash", objpi.Password_hash);
-        //            cmdsrc.Parameters.AddWithValue("@ConfirmPassword", objpi.ConfirmPassword);
-        //            cmdsrc.Parameters.AddWithValue("@MobileNo", objpi.Phone_Number);
-        //            cmdsrc.Parameters.AddWithValue("@Gender", objpi.Gender);
-        //            cmdsrc.Parameters.AddWithValue("@UserId", objpi.UserId);
-
-
-        //            SqlDataAdapter da = new SqlDataAdapter(cmdsrc);
-        //            da.Fill(ds);
-        //            return ds;
-        //        }
-
-        //        catch (Exception ex)
-        //        {
-        //            throw ex;
-        //        }
-        //        finally
-        //        {
-        //            con.Close();
-        //        }
-        //    }
-        //}
+        //ins_Registration
 
         public DataSet ins_Registration(Registrationk objpi)
         {
@@ -152,7 +120,6 @@ namespace Admin.Models
                     cmdsrc.Parameters.AddWithValue("@City", objpi.City);
                     cmdsrc.Parameters.AddWithValue("@Gender", objpi.Gender);
 
-
                     SqlDataAdapter da = new SqlDataAdapter(cmdsrc);
                     da.Fill(ds);
                     return ds;
@@ -169,6 +136,9 @@ namespace Admin.Models
             }
         }
 
+
+        //btn_ulogin
+
         public DataSet btn_ulogin(EMSclass.userlogin obj)
         {
             DataSet ds = new DataSet();
@@ -176,8 +146,6 @@ namespace Admin.Models
             {
                 try
                 {
-                    //   SqlCommand cmd = new SqlCommand("pr_get_userlog", con);
-
                     SqlCommand cmd = new SqlCommand("Pr_get_loginuserk", con);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@UserId", obj.UserId);
@@ -186,17 +154,22 @@ namespace Admin.Models
                     da.Fill(ds);
                     return ds;
                 }
+
                 catch (Exception ex)
                 {
                     throw ex;
 
                 }
+
                 finally
                 {
                     con.Close();
                 }
             }
         }
+
+
+        //Banner
 
         public DataSet Banner(Banner objpi)
         {
@@ -229,6 +202,8 @@ namespace Admin.Models
             }
         }
 
+
+        //AddProduct
 
         public DataSet AddProduct(AddProducts objpi)
         {
@@ -264,13 +239,16 @@ namespace Admin.Models
                 {
                     throw ex;
                 }
+
                 finally
                 {
                     con.Close();
                 }
             }
-
         }
+
+
+        //ins_tbl_wishlist1
 
         public DataSet ins_tbl_wishlist1(string APID, String MobileNumber, string EmailID)
         {
@@ -301,9 +279,8 @@ namespace Admin.Models
         }
 
 
+        //ins_tbl_cart
 
-        //public DataSet ins_tbl_cart(insertcart objpi)
-        //{
         public DataSet ins_tbl_cart(string APID, string UserId, String MobileNumber, string EmailID, string Quantity ,string IsActive)
         {
             DataSet ds = new DataSet();
@@ -336,7 +313,8 @@ namespace Admin.Models
             }
         }
 
-      
+
+        //ProductDetails
 
         public DataSet ProductDetails(string APID)
         {
@@ -353,6 +331,9 @@ namespace Admin.Models
             }
 
         }
+
+
+        //inscontact_page
 
         public DataSet inscontact_page(contact1 objpi)
         {
@@ -372,7 +353,6 @@ namespace Admin.Models
                     cmdsrc.Parameters.AddWithValue("@CreatedBy", objpi.CreatedBy);
                     cmdsrc.Parameters.AddWithValue("@CreatedIP", objpi.createdIp);
                     cmdsrc.Parameters.AddWithValue("@IsActive", objpi.IsActive);
-
 
                     SqlDataAdapter da = new SqlDataAdapter(cmdsrc);
                     da.Fill(ds);
@@ -394,6 +374,8 @@ namespace Admin.Models
             throw new NotImplementedException();
         }
 
+
+        //get_addItemCart
         public DataSet get_addItemCart()
         {
             DataSet ds = new DataSet();
@@ -408,10 +390,12 @@ namespace Admin.Models
                     da.Fill(ds);
 
                 }
+
                 catch (Exception ex)
                 {
                     throw ex;
                 }
+
                 finally
                 {
                     con.Close();
@@ -419,6 +403,9 @@ namespace Admin.Models
             }
             return ds;
         }
+
+
+        //ins_tbl_Product_Cart1
 
         public DataSet ins_tbl_Product_Cart1(int aPID)
         {
@@ -443,6 +430,7 @@ namespace Admin.Models
                 }
             return ds;
         }
+
 
         //insbillingaddress
 
@@ -482,7 +470,9 @@ namespace Admin.Models
             }
         }
 
+
         // get the cart count 
+
         public DataSet get_CartCount()
         {
             DataSet ds = new DataSet();
@@ -509,7 +499,9 @@ namespace Admin.Models
             return ds;
         }
 
+
         // get the wishlist count
+
         public DataSet get_wishlistcount()
         {
             DataSet ds = new DataSet();
@@ -535,7 +527,9 @@ namespace Admin.Models
             return ds;
         }
 
-        // payment details form ------
+
+        // payment details 
+
         public DataSet inspaymentdetails(PaymentDetails objpi)
         {
             DataSet ds = new DataSet();
@@ -551,7 +545,6 @@ namespace Admin.Models
                     cmdsrc.Parameters.AddWithValue("@Year", objpi.Year);
                     cmdsrc.Parameters.AddWithValue("@CVV", objpi.CVV);
 
-
                     SqlDataAdapter da = new SqlDataAdapter(cmdsrc);
                     da.Fill(ds);
                     return ds;
@@ -561,6 +554,7 @@ namespace Admin.Models
                 {
                     throw ex;
                 }
+
                 finally
                 {
                     con.Close();
@@ -569,8 +563,7 @@ namespace Admin.Models
         }
 
 
-
-        ///get_contactUs
+        //get_contactUs
 
         public DataSet get_contactUs(Contact_Us objpi)
         {
@@ -591,6 +584,7 @@ namespace Admin.Models
                 {
                     throw ex;
                 }
+
                 finally
                 {
                     con.Close();
@@ -598,7 +592,8 @@ namespace Admin.Models
             }
         }
 
-        ///get_count for subscribe
+
+        //get_count for subscribe
 
         public DataSet get_countSubscribe(Contact_Us objpi)
         {
@@ -619,13 +614,13 @@ namespace Admin.Models
                 {
                     throw ex;
                 }
+
                 finally
                 {
                     con.Close();
                 }
             }
         }
-
 
 
         //get_MessagesCount
@@ -648,18 +643,52 @@ namespace Admin.Models
                 {
                     throw ex;
                 }
+
                 finally
                 {
                     con.Close();
                 }
             }
+
             return ds;
         }
 
 
+        //ins_AddEvents
+
+        public DataSet ins_AddEvents(AddEvents1 objpi)
+        {
+            DataSet ds = new DataSet();
+            using (SqlConnection con = new SqlConnection(str))
+            {
+                try
+                {
+                    SqlCommand cmdsrc = new SqlCommand("pr_AddEvent", con);
+                    cmdsrc.CommandType = CommandType.StoredProcedure;
+                    cmdsrc.Parameters.AddWithValue("@EventName", objpi.EventName);
+                    cmdsrc.Parameters.AddWithValue("@Eventstartdate", objpi.Eventstartdate);
+                    cmdsrc.Parameters.AddWithValue("@Eventenddate", objpi.Eventenddate);
+                    cmdsrc.Parameters.AddWithValue("@ImgUrl", objpi.ImgUrl);
+
+                    SqlDataAdapter da = new SqlDataAdapter(cmdsrc);
+                    da.Fill(ds);
+                    return ds;
+                }
+
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+                finally
+                {
+                    con.Close();
+                }
+            }
+        }
 
 
         //ins_subscribe
+
         public DataSet ins_subscribe(subscribe objpi)
         {
             DataSet ds = new DataSet();
@@ -700,7 +729,6 @@ namespace Admin.Models
                     cmdsrc.CommandType = CommandType.StoredProcedure;
                     SqlDataAdapter da = new SqlDataAdapter(cmdsrc);
                     da.Fill(ds);
-
                 }
 
                 catch (Exception ex)
@@ -714,6 +742,36 @@ namespace Admin.Models
             }
             return ds;
         }
+
+
+        //get_Subscriberdetails
+
+        public DataSet get_Subscriberdetails()
+        {
+            DataSet ds = new DataSet();
+            using (SqlConnection con = new SqlConnection(str))
+            {
+                try
+                {
+                    SqlCommand cmdsrc = new SqlCommand("pr_getsubscribersdetails", con);
+                    cmdsrc.CommandType = CommandType.StoredProcedure;
+                    SqlDataAdapter da = new SqlDataAdapter(cmdsrc);
+                    da.Fill(ds);
+                }
+
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+                finally
+                {
+                    con.Close();
+                }
+            }
+            return ds;
+        }
+
+
     }
 }
 
