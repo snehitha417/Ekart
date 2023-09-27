@@ -10,7 +10,6 @@
             background-color:#f5f9ff;
             
         }
-
         .container{
                margin-top: 5rem;
                margin-left: 16rem;
