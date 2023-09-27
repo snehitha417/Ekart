@@ -15,6 +15,8 @@ namespace Admin.AdminScreens
         protected void Page_Load(object sender, EventArgs e)
         {
 
+            txt_entrydate.Text = Session["date"].ToString();
+
         }
 
         protected void Product_submitt_Click(object sender, EventArgs e)

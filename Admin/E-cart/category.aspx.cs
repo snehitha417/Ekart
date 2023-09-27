@@ -165,8 +165,6 @@ namespace Admin.E_cart
             DataSet ds = new DataSet();
             ds = emsdal.ins_tbl_cart(APID, "", "", "", "");
 
-
-
             string script = "<script>$('#myModal').modal('show');</script>";
             ClientScript.RegisterStartupScript(this.GetType(), "popupscript", script);
 
@@ -233,7 +231,6 @@ namespace Admin.E_cart
         protected void WishList_Click(object sender, EventArgs e)
         {
             string APID = ((LinkButton)sender).CommandArgument;
-
 
             emsdal emsdal = new emsdal();
             DataSet ds = new DataSet();
