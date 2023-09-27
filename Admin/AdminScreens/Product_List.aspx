@@ -5,7 +5,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="bodymain">
+    <div class="mainbody">
         <div class="container">
             <style>
                 .my-table {
@@ -50,7 +50,8 @@
                     border-radius: 0.5rem;
                 }
             </style>
-            <form id="form1" runat="server">
+
+            <form>
                 <asp:Panel runat="server" ID="List">
                     <asp:ScriptManager runat="server" ID="SM1"></asp:ScriptManager>
                     <div class="table">
@@ -117,7 +118,9 @@
                                                     OnClientClick="return confirm('Are you sure you want to Edit this Item?');" AlternateText="Edit" />
 
                                                 <asp:Button ID="btn_remov" Text="Remove" OnClick="click_remove" runat="server" Style="width: 5rem; border-radius: 0.5rem; background-color: red; color: white; font-weight: bold;"
-                                                    OnClientClick="return confirm('Are you sure you want to delete this Item?');" AlternateText="Delete"></asp:Button></td>
+                                                    OnClientClick="return confirm('Are you sure you want to delete this Item?');" AlternateText="Delete"></asp:Button>
+
+                                            </td>
                                         </tr>
 
 
@@ -138,7 +141,7 @@
 
                     </div>
                 </asp:Panel>
-            </form>
+           </form>
             <br />
             <br />
         </div>
