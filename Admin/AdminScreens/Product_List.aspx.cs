@@ -31,8 +31,10 @@ namespace Admin.AdminScreens
             {
                 // SQL query to retrieve data from the database
                 //string query = "SELECT * FROM tbl_StockEntry";
-
-                using (SqlCommand command = new SqlCommand("pr_get_Product", connection))
+                string query = @"select APID, EntryDate, ProductName, ProductPrice, Discount, Model, 
+                  Brand, AdditionalInformation, Description, Rating,replace(UploadImage, 'C:\Users\K. Snehitha\Documents\ems updated\Admin\Admin', '') UploadImage, CreatedBy, CreatedIp, CreatedDate, 
+                     ModifyBy, ModifyIp, ModifyDate, IsActive from tbl_AddProduct";
+                using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     connection.Open();
 
@@ -47,41 +49,41 @@ namespace Admin.AdminScreens
             }
         }
 
-        //protected void gridView_ItemCommand(object source, RepeaterCommandEventArgs e)
-        //{
+        protected void gridView_ItemCommand(object source, RepeaterCommandEventArgs e)
+        {
 
 
-        //    if (e.CommandName == "edit")
-        //    {
-        //        int APID = Convert.ToInt32(e.CommandArgument);
+            if (e.CommandName == "edit")
+            {
+                int APID = Convert.ToInt32(e.CommandArgument);
 
-        //        emsdal dl = new emsdal();
-        //        DataSet ds = dl.get_tbl_ProductEdit(APID);
+                emsdal dl = new emsdal();
+                DataSet ds = dl.get_tbl_ProductEdit(APID);
 
-        //        if (ds.Tables[0].Rows.Count > 0)
-        //        {
-        //            Session["date"] = Convert.ToDateTime(ds.Tables[0].Rows[0]["EntryDate"].ToString()).ToString("yyyy-MM-dd");
-        //            Session["name"] = ds.Tables[0].Rows[0]["ProductName"].ToString();
-        //            Session["price"] = ds.Tables[0].Rows[0]["ProductPrice"].ToString();
-        //            Session["Discount"] = ds.Tables[0].Rows[0]["Discount"].ToString();
-        //            Session["Model"] = ds.Tables[0].Rows[0]["Model"].ToString();
-        //            Session["Brand"] = ds.Tables[0].Rows[0]["Brand"].ToString();
-        //            Session["information"] = ds.Tables[0].Rows[0]["AdditionalInformation"].ToString();
-        //            Session["Description"] = ds.Tables[0].Rows[0]["Description"].ToString();
-        //            Session["Rating"] = ds.Tables[0].Rows[0]["Rating"].ToString();
-        //           // Session["Rati"] = ds.Tables[0].Rows[0]["UploadImage"].ToString();
-        //           // Session["Offers"] = ds.Tables[0].Rows[0]["Offers"].ToString();
-        //            if (!string.IsNullOrEmpty(ds.Tables[0].Rows[0]["ImgUrl"].ToString()))
-        //            {
-        //              Session["filePath"] = Server.MapPath("~/banner/") + ds.Tables[0].Rows[0]["UploadImage"].ToString();
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+                    Session["date"] = Convert.ToDateTime(ds.Tables[0].Rows[0]["EntryDate"].ToString()).ToString("yyyy-MM-dd");
+                    Session["name"] = ds.Tables[0].Rows[0]["ProductName"].ToString();
+                    Session["price"] = ds.Tables[0].Rows[0]["ProductPrice"].ToString();
+                    Session["Discount"] = ds.Tables[0].Rows[0]["Discount"].ToString();
+                    Session["Model"] = ds.Tables[0].Rows[0]["Model"].ToString();
+                    Session["Brand"] = ds.Tables[0].Rows[0]["Brand"].ToString();
+                    Session["information"] = ds.Tables[0].Rows[0]["AdditionalInformation"].ToString();
+                    Session["Description"] = ds.Tables[0].Rows[0]["Description"].ToString();
+                    Session["Rating"] = ds.Tables[0].Rows[0]["Rating"].ToString();
+                    // Session["Rati"] = ds.Tables[0].Rows[0]["UploadImage"].ToString();
+                    // Session["Offers"] = ds.Tables[0].Rows[0]["Offers"].ToString();
+                    if (!string.IsNullOrEmpty(ds.Tables[0].Rows[0]["ImgUrl"].ToString()))
+                    {
+                        Session["filePath"] = Server.MapPath("~/banner/") + ds.Tables[0].Rows[0]["UploadImage"].ToString();
 
-        //            }
+                    }
 
-        //            Response.Redirect("AddNewProduct.aspx?ID=" + APID + "&type=edit");
-        //        }
-        //    }
+                    Response.Redirect("AddNewProduct.aspx?ID=" + APID + "&type=edit");
+                }
+            }
 
-        //}
+        }
 
         protected void click_remove(object sender, EventArgs e)
         {
@@ -131,7 +133,7 @@ namespace Admin.AdminScreens
 
         protected void ADDItem_Click(object sender, EventArgs e)
         {
-            Response.Redirect("stockentry.aspx");
+            Response.Redirect("ADDNewProduct.aspx");
         }
         protected void btnyes_Click(object sender, EventArgs e)
         {

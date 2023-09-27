@@ -15,7 +15,7 @@ namespace Admin.AdminScreens
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            txt_entrydate.Text = Session["date"].ToString();
+            //txt_entrydate.Text = Session["date"].ToString();
 
         }
 

@@ -55,6 +55,9 @@
                     <a href="AddNewProduct.aspx" class="list-group-item list-group-item-action py-2 ripple">
                         <i class="fa-solid fa-arrow-right-to-bracket"></i>&nbsp<span>Add Product</span> </a>
 
+                    <a href="Product_List.aspx" class="list-group-item list-group-item-action py-2 ripple">
+                    <i class="fa-solid fa-table-list"></i>&nbsp<span>Product List</span> </a>
+
                     <a href="Customers.aspx" class="list-group-item list-group-item-action py-2 ripple">
                         <i class="fa-regular fa-user"></i>&nbsp<span>Customers</span> </a>
 
