@@ -14,9 +14,27 @@ namespace Admin.AdminScreens
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                if (Request.QueryString["type"] != null)
+                {
+                    if (Session["date"] != null && !string.IsNullOrWhiteSpace(Session["date"].ToString()))
+                    {
 
-            //txt_entrydate.Text = Session["date"].ToString();
-
+                        txt_entrydate.Text = Session["date"].ToString();
+                        txt_productName.Text = Session["name"].ToString();
+                        txt_productprice.Text = Session["price"].ToString();
+                        txt_discount.Text = Session["Discount"].ToString();
+                        txt_rating.Text = Session["Rating"].ToString();
+                        txt_modal.Text = Session["Model"].ToString();
+                        txt_brand.Text = Session["Brand"].ToString();
+                        txt_addinf.Text = Session["information"].ToString();
+                        txt_descrip.Text = Session["Description"].ToString();
+                        FileuploadImage.ToolTip = Session["filePath"].ToString();
+                        Button1.Text = "Update";
+                    }
+                }
+            } 
         }
 
         protected void Product_submitt_Click(object sender, EventArgs e)
@@ -38,29 +56,61 @@ namespace Admin.AdminScreens
             objpi.CreatedDate = DateTime.Now;
             objpi.IsActive = "1";
 
-            int result = 0;
-            emsdal objDAL = new emsdal();
-            DataSet ds = objDAL.AddProduct(objpi);
-
-            try
+            if (Button1.Text == "Submitt")
             {
-                if (result > 0)
+                int result = 0;
+                emsdal objDAL = new emsdal();
+                DataSet ds = objDAL.AddProduct(objpi);
+
+                try
                 {
-                    Response.Clear();
+                    if (result > 0)
+                    {
+                        Response.Clear();
+                    }
+                    else
+                    {
+
+                    }
+
+                    txt_entrydate.Text = null;
+                    txt_productName.Text = null;
+                    txt_productprice.Text = null;
+                    txt_modal.Text = null;
+                    txt_addinf.Text = null;
+                    txt_descrip.Text = null;
+                    txt_discount.Text = null;
+                    txt_rating.Text = null;
+                    txt_brand.Text = null;
                 }
-                else
+
+                catch (Exception ex)
                 {
+
+                    throw ex;
 
                 }
             }
-
-            catch (Exception ex)
+            else
             {
-
-                throw ex;
-
+                Button1.Text = "Submitt";
+                emsdal ds = new emsdal();
+                int APID = int.Parse(Request.QueryString["ID"]);
+                DataSet ds1 = new DataSet();
+                ds1 = ds.update_product(APID, objpi);
             }
-            ScriptManager.RegisterStartupScript(this, typeof(string), "Send", "alert('successfully uploadSS');", true);
+
+            txt_entrydate.Text = null;
+            txt_productName.Text = null;
+            txt_productprice.Text = null;
+            txt_modal.Text = null;
+            txt_addinf.Text = null;
+            txt_descrip.Text = null;
+            txt_discount.Text = null;
+            txt_rating.Text = null;
+            txt_brand.Text = null;
+
+            //ScriptManager.RegisterStartupScript(this, typeof(string), "Send", "alert('successfully uploadSS');", true);
      
         }
 

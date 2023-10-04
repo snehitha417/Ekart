@@ -136,7 +136,7 @@ namespace Admin.E_cart
             Button btn = (Button)sender;
             string apid = btn.CommandArgument;
             Session["Id"] = apid;
-            Response.Redirect("check.aspx?APID=" + apid);
+            Response.Redirect("checkout.aspx?APID=" + apid);
         }
 
 
