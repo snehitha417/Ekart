@@ -73,7 +73,7 @@ namespace Admin.AdminScreens
                     Session["Rating"] = ds.Tables[0].Rows[0]["Rating"].ToString();
                     // Session["Rati"] = ds.Tables[0].Rows[0]["UploadImage"].ToString();
                     // Session["Offers"] = ds.Tables[0].Rows[0]["Offers"].ToString();
-                    if (!string.IsNullOrEmpty(ds.Tables[0].Rows[0]["ImgUrl"].ToString()))
+                    if (!string.IsNullOrEmpty(ds.Tables[0].Rows[0]["UploadImage"].ToString()))
                     {
                         Session["filePath"] = Server.MapPath("~/banner/") + ds.Tables[0].Rows[0]["UploadImage"].ToString();
 
@@ -91,7 +91,7 @@ namespace Admin.AdminScreens
             Button btn = (sender as Button);
             RepeaterItem item = btn.NamingContainer as RepeaterItem;
             int index = item.ItemIndex;
-            Label hdn = item.FindControl("lblapid") as Label;
+            Label hdn = item.FindControl("lblseid") as Label;
             int apid = Convert.ToInt32(hdn.Text);
 
 
@@ -142,6 +142,11 @@ namespace Admin.AdminScreens
         protected void btn_Cancel(object sender, EventArgs e)
         {
             BindData();
+        }
+
+        protected void btn_edit_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AdminScreens/Admin.Master" AutoEventWireup="true" CodeBehind="AddNewProduct.aspx.cs" Inherits="Admin.AdminScreens.AddNewProduct" %>
+﻿<%@ Page Title="" enableEventValidation="false" Language="C#" MasterPageFile="~/AdminScreens/Admin.Master" AutoEventWireup="true" CodeBehind="AddNewProduct.aspx.cs" Inherits="Admin.AdminScreens.AddNewProduct" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">

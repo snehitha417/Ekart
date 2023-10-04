@@ -224,7 +224,7 @@ namespace Admin.E_cart
                         if (cartimage.Controls.Count > 0)
                         {
                             cartimage.Controls.Clear();
-                            BindData();
+                              BindData();
 
                         }
                         else

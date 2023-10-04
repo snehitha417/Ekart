@@ -1,11 +1,14 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AdminScreens/Admin.Master" AutoEventWireup="true" CodeBehind="Product_List.aspx.cs" Inherits="Admin.AdminScreens.WebForm1" %>
+﻿<%@ Page Title="" enableEventValidation="false" Language="C#" MasterPageFile="~/AdminScreens/Admin.Master" AutoEventWireup="true" CodeBehind="Product_List.aspx.cs" Inherits="Admin.AdminScreens.WebForm1" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="mainbody">
+    <div class="mainbody1" style="
+                    margin-left:160px;
+                    margin-top:100px;
+                ">
         <div class="container">
             <style>
                 .my-table {
@@ -28,7 +31,7 @@
                     }
 
                 .table {
-                    width: 1400px;
+                    width: 1234px;
                 }
 
                 .GridView-HeaderText {
@@ -44,11 +47,12 @@
                     height: 2rem;
                     font-weight: bold;
                     background-color: lawngreen;
-                    margin-left: 77rem;
+                    margin-left: 66rem;
                     width: 7rem;
                     border-color: gold;
                     border-radius: 0.5rem;
                 }
+                
             </style>
 
             <form>
@@ -114,10 +118,10 @@
                                                 <asp:Label ID="lblrate" runat="server" Text='<%# Eval("Rating") %>' />
                                             </td>
                                             <td>
-                                                <asp:Button ID="btn_edit" runat="server" Text="Edit" CommandArgument='<%#Eval("APID")%>' CommandName="edit" OnClick="click_Edit" Style="width: 5rem; border-radius: 0.5rem; background-color: greenyellow; font-weight: bold;"
+                                                <asp:Button ID="btn_edit" runat="server" Text="Edit" CommandArgument='<%#Eval("APID")%>' CommandName="edit" OnClick="btn_edit_Click" Style="width: 5rem; border-radius: 0.5rem; background-color: #ffe500; border:none; font-weight: bold;"
                                                     OnClientClick="return confirm('Are you sure you want to Edit this Item?');" AlternateText="Edit" />
 
-                                                <asp:Button ID="btn_remov" Text="Remove" OnClick="click_remove" runat="server" Style="width: 5rem; border-radius: 0.5rem; background-color: red; color: white; font-weight: bold;"
+                                                <asp:Button ID="btn_remov" Text="Remove" OnClick="click_remove" runat="server" Style="width: 5rem; border-radius: 0.5rem; background-color: red; border:none; color: white; font-weight: bold;"
                                                     OnClientClick="return confirm('Are you sure you want to delete this Item?');" AlternateText="Delete"></asp:Button>
 
                                             </td>

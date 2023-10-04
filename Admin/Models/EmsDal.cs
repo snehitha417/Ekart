@@ -61,7 +61,37 @@ namespace Admin.Models
 
         }
 
-    
+        internal DataSet ins_tbl_cart(string aPID, string v1, string v2, string v3, string v4)
+        {
+            throw new NotImplementedException();
+        }
+
+        public DataSet get_tbl_ProductEdit(int aPID)
+        {
+            DataSet ds = new DataSet();
+            using (SqlConnection con = new SqlConnection(str))
+                try
+                {
+                    SqlCommand cmd = new SqlCommand("pr_product_Edit", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@APID", aPID);
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(ds);
+
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+                finally
+                {
+                    con.Close();
+
+                }
+            return ds;
+        }
+
+
         //get_AdminLogin
 
         public DataSet get_AdminLogin(signin objpi)
@@ -84,6 +114,49 @@ namespace Admin.Models
                 {
                     throw ex;
 
+                }
+
+                finally
+                {
+                    con.Close();
+                }
+            }
+        }
+
+        public DataSet update_product(int aPID, EMSclass.AddProducts objpi)
+        {
+            DataSet ds = new DataSet();
+            using (SqlConnection con = new SqlConnection(str))
+            {
+                try
+                {
+                    SqlCommand cmdsrc = new SqlCommand("pr_update_product", con);
+                    cmdsrc.CommandType = CommandType.StoredProcedure;
+                    cmdsrc.Parameters.AddWithValue("@APID", aPID);
+                    cmdsrc.Parameters.AddWithValue("@EntryDate", objpi.EntryDate);
+                    cmdsrc.Parameters.AddWithValue("@ProductName", objpi.ProductName);
+                    cmdsrc.Parameters.AddWithValue("@ProductPrice", objpi.ProductPrice);
+                    cmdsrc.Parameters.AddWithValue("@Discount", objpi.Discount);
+                    cmdsrc.Parameters.AddWithValue("@Model", objpi.Model);
+                    cmdsrc.Parameters.AddWithValue("@Brand", objpi.Brand);
+                    cmdsrc.Parameters.AddWithValue("@AdditionalInformation", objpi.AdditionalInformation);
+                    cmdsrc.Parameters.AddWithValue("@Description", objpi.Description);
+                    cmdsrc.Parameters.AddWithValue("@Rating", objpi.Rating);
+                    cmdsrc.Parameters.AddWithValue("@UploadImage", objpi.UploadImage);
+                   // cmdsrc.Parameters.AddWithValue("@CreatedBy", objpi.CreatedBy);
+                   // cmdsrc.Parameters.AddWithValue("@CreatedIp", objpi.CreatedIp);
+                   // cmdsrc.Parameters.AddWithValue("@createdDate", objpi.CreatedDate);
+                  //  cmdsrc.Parameters.AddWithValue("@IsActive", objpi.IsActive);
+
+
+                    SqlDataAdapter da = new SqlDataAdapter(cmdsrc);
+                    da.Fill(ds);
+                    return ds;
+                }
+
+                catch (Exception ex)
+                {
+                    throw ex;
                 }
 
                 finally
@@ -247,6 +320,11 @@ namespace Admin.Models
             }
         }
 
+        //internal DataSet ins_tbl_cart(string aPID, string v1, string v2, string v3, string v4, string v5)
+        //{
+        //    throw new NotImplementedException();
+        //}
+
 
         //ins_tbl_wishlist1
 
@@ -281,7 +359,7 @@ namespace Admin.Models
 
         //ins_tbl_cart
 
-        public DataSet ins_tbl_cart(string APID, string UserId, String MobileNumber, string EmailID, string Quantity ,string IsActive)
+        protected DataSet ins_tbl_cart(string APID, string UserId, String MobileNumber, string EmailID, string Quantity ,string IsActive)
         {
             DataSet ds = new DataSet();
             using (SqlConnection con = new SqlConnection(str))
@@ -369,10 +447,8 @@ namespace Admin.Models
             }
         }
 
-        internal DataSet ins_tbl_cart(string aPID, string v1, string v2, string v3, string v4)
-        {
-            throw new NotImplementedException();
-        }
+    // internal DataSet ins_tbl_cart(string aPID, string v1, string v2, string v3, string v4)
+       
 
 
         //get_addItemCart
@@ -743,6 +819,31 @@ namespace Admin.Models
             return ds;
         }
 
+        public DataSet get_tbl_StockEdit(int APID)
+        {
+            DataSet ds = new DataSet();
+            using (SqlConnection con = new SqlConnection(str))
+                try
+                {
+                    SqlCommand cmd = new SqlCommand("pr_product_Edit", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@APID", APID);
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(ds);
+
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+                finally
+                {
+                    con.Close();
+
+                }
+            return ds;
+
+        }
 
         //get_Subscriberdetails
 
